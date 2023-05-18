@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML-like</title>
+    <link rel="stylesheet" href="../style/stylePages.css">
+</head>
+<body>
+    <header class="headerPages">
+        <div class="headerBar">
+            <div class="logo">
+                <a href="../../index.html" class="logoLink">
+                    <i>&lt;Tech&gt;</i>
+                </a>
+            </div>
+            <div class="containerDark">
+                <input type="checkbox" class="checkbox" id="chk">
+                <label class="label" for="chk">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                    <div class="ball"></div>
+                </label>
+            </div>
+            <div class="containerMenu">
+                <img class="menuBurguer40px" style="display: block;" src="../icones/menu_FILL0_wght400_GRAD0_opsz40.svg" alt="abrir o menu">
+                
+                <img class="closeMenu40px" src="../icones/close_FILL0_wght500_GRAD0_opsz40.svg" alt="fechar menu">
+            </div>
+        </div>
+        <nav class="navPages">
+            <ul>
+                <li> <a href="react.html">React</a></li>
+                <li> <a href="Ciclo_de_vida_comp.html">Ciclo de vida do componente</a></li>
+                <li> <a href="Componentes_React.html">Componentes React</a></li>
+                <li> <a href="Context_API.html">Context API</a></li>
+                <li> <a href="Eventos.html">Eventos</a></li>
+                <li> <a href="Hooks.html">Hooks</a></li>
+                <li> <a href="JSX.html">JSX</a></li>
+                <li> <a href="metodo_render.html">Método render</a></li>
+                <li> <a href="Props.html">Props</a></li>
+                <li> <a href="React_Router.html">React Router</a></li>
+                <li> <a href="Renderizacao.html">Renderizacao</a></li>
+                <li> <a href="State.html">State</a></li>
+                <li> <a href="MobX/MobX.html">MobX</a></li>
+                <li> <a href="redux/redux.html">Redux</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container_aside-main">
+    <aside class="asidePages">
+        <ul>
+            <li><a href="../frontEnd.html">Front End</a></li>
+            <li><a href="../acessibilidade/acessibilidade.html">Acessibilidade</a></li>
+            <li><a href="../angular/angular.html">Angular</a></li>
+            <li><a href="../boasPraticasCodificacao/boasPraticas.html">Boas Praticas</a></li>
+            <li><a href="../css/css.html">CSS</a></li>
+            <li><a href="../designInterface/designIterface.html">design Interface</a></li>
+            <li><a href="../ferramentasFrontEnd/ferramentasFrontEnd.html">Ferramentas FrontEnd</a></li>
+            <li><a href="../html/html.html">HTML</a></li>
+            <li><a href="../javascript/javascript.html">Javascript</a></li>
+            <li><a href="../otimizacaoDesempenho/otimizacaoDesempenho.html">Otimização de Desempenho</a></li>
+            <li><a href="../react/react.html">React</a></li>
+            <li><a href="../SEO/SEO.html">SEO</a></li>
+            <li><a href="../vue/vue.html">Vue</a></li>
+        </ul>
+    </aside>
+    <main class="main_content">
+        <h1 class="title">HTML-like</h1>
+
+        <p>O termo "HTML-like" é frequentemente usado para descrever a sintaxe do JSX em React, porque ela se parece com o HTML, mas na verdade é uma extensão da sintaxe JavaScript. Isso significa que as tags HTML-like no código JSX são convertidas em chamadas de função JavaScript que criam elementos React.</p>
+    
+        <p>Por exemplo, uma tag HTML-like &lt;div&gt; em JSX é convertida em uma chamada da função JavaScript React.createElement() que cria um elemento React com a tag &lt;div&gt;:</p>
+        
+<pre><code>
+    &lt;div className="minha-classe"&gt;Meu conteúdo&lt;/div&gt;
+</code></pre>
+        
+        <p>É convertido em:</p>
+        
+<pre><code>
+    React.createElement("div", { className: "minha-classe" }, "Meu conteúdo")
+</code></pre>
+        
+        <p>Observe que a tag &lt;div&gt; é passada como o primeiro argumento para React.createElement(), seguida por um objeto de propriedades, que contém as propriedades e atributos da tag, e finalmente o conteúdo da tag, que é um texto simples ou outros elementos React.</p>
+        
+        <p>Em resumo, a sintaxe "HTML-like" no JSX em React se parece com o HTML, mas é uma extensão da sintaxe JavaScript que é convertida em elementos React. Essa sintaxe é uma das características que tornam o React uma biblioteca de interface de usuário fácil e intuitiva de usar.</p>
+    </main>
+    </div>
+    <footer>
+        <div class="container">
+            <h4>Sobre Nós</h4>
+            <p>Nosso blog é uma fonte de informações valiosas para desenvolvedores iniciantes e experientes, além de estudantes e entusiastas da área. Nós nos dedicamos a oferecer conteúdo atualizado e de qualidade para ajudá-lo a aprimorar suas habilidades e se manter à frente no mundo em constante mudança da programação e desenvolvimento de software.</p>
+
+            <p>Editado por <a href="https://www.linkedin.com/in/tiago-psouza-546706246?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BSqaWqSehTM2MOxjXCnxq1g%3D%3D">Tiago Souza.</a></p>
+        </div>
+        <div class="container2">
+            <h4>Contato</h4>
+            <ul>
+                <li><span>Telefone</span>: (61) 993160984</li>
+                <li><span>Email</span>: developer.tiagotech@gmail.com</li>
+            </ul>
+        </div>
+    </footer>
+    <script src="../script/script.js"></script>
+    <script src="https://kit.fontawesome.com/998c60ef77.js" crossorigin="anonymous"></script>
+</body>
+</html>

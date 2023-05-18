@@ -1,0 +1,259 @@
+:root {
+    --color1: #000000;
+    --color2: #262626;
+    --color3: #4c4c4c;
+    --color4: #717171;
+    --color5: #979797;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    background: var(--color1);
+    color: var(--color5);
+}
+
+body.clear {
+    background: var(--color5);
+    color: var(--color1);
+}
+
+/* header */
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+.logoLink{
+    text-decoration: none;
+    color: white;
+}
+
+.label {
+    margin: 8px;
+    background-color: var(--color1);
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    position: relative;
+    height: 26px;
+    width: 50px;
+}
+
+.label .ball {
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    height: 22px;
+    width: 22px;
+    transform: translateX(0px);
+    transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .label .ball {
+    transform: translateX(24px);
+}
+
+.containerDark .fa-moon {
+    color: blue;
+    display: block;
+}
+
+.containerDark .fa-sun {
+    color: yellow;
+    display: block;
+}
+
+.headerBar {
+    height: 49.59px;
+    display: flex;
+    justify-content: space-between;
+    padding: .3em 1em;
+    background: linear-gradient(to left, var(--color4), var(--color3), var(--color2));
+}
+
+.logo {
+    display: block;
+    padding: .8em 0 0;
+    color: white;
+}
+
+.closeMenu40px {
+    display: none;
+    background-color: var(--color3);
+}
+.navPages ul {
+    display: none;
+    background: var(--color1);
+    text-align: center;
+    padding: 1em;
+}
+.navPages ul li {
+    border-bottom: 1px solid var(--color1);
+    list-style: none;
+    font-size: 1.5em;
+    background: var(--color4);
+    transition: .5s;
+}
+.navPages ul li a {
+    text-decoration: none;
+    color: var(--color2);
+    transition: .5s;
+    display: block;
+    padding: .3em;
+}
+.navPages ul li a:hover {
+    color: white;
+    background-image: linear-gradient(transparent, var(--color3));
+}
+ 
+/* aside */
+
+.asidePages ul {
+    display: none;
+    background: var(--color1);
+    text-align: center;
+    padding: 1em;
+}
+.asidePages ul li {
+    border-bottom: 1px solid var(--color1);
+    list-style: none;
+    font-size: 1.5em;
+    background: var(--color2);
+    transition: .5s;
+}
+.asidePages ul li a {
+    text-decoration: none;
+    color: var(--color4);
+    transition: .5s;
+    display: block;
+    padding: .3em;
+}
+.asidePages ul li a:hover {
+    color: white;
+    background-image: linear-gradient(transparent, var(--color3));
+}
+
+
+/* main */
+
+.main_content .title{
+    text-align: center;
+    font-weight: 400;
+    text-shadow: 1px 1px 1px white;
+    margin: 1em;
+}
+.main_content p{
+    margin: 1.5em;
+    font-size: 1.2em;
+    letter-spacing: .1em;
+}
+.main_content p a {
+    text-decoration: none;
+    color: wheat;
+    transition: .5s;
+}
+.main_content p a:hover {
+    color: var(--color3);
+    text-shadow: 2px 2px 1px white;
+}
+.main_content p .link_content {
+    color: white;
+}
+
+/* code */
+
+pre {
+    margin: 1.5em;
+    border: 1px solid white;
+    background: var(--color2);
+    color: wheat;
+    padding: .5em 1em 1em .5em;
+    overflow-x: auto;
+}
+
+pre code {
+    font-family: monospace;
+    margin: auto;
+}
+
+/* footer */
+
+footer {
+    background: var(--color2);
+    padding: 1em 1em 2em;
+    display: flex;
+}
+
+footer h4 {
+    font-size: 1.3em;
+    margin-bottom: 1em;
+}
+
+footer .container {
+    border-right: 1px solid var(--color5);
+    font-size: .8em;
+    width: 50%;
+    padding-right: 1em;
+    letter-spacing: .07em;
+}
+
+footer .container a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    transition: .5s;
+    border: 1px solid var(--color2);
+}
+
+footer .container a:hover {
+    color: wheat;
+    background: linear-gradient(var(--color2), var(--color3));
+}
+
+footer .container2 {
+    padding-left: 1em;
+}
+
+footer .container2 li {
+    display: block;
+    list-style: none;
+    margin: .5em .5em 1em;
+}
+
+footer .container2 li span {
+    font-size: .8em;
+}
+
+/* media query */
+
+@media screen and (min-width: 48.75em) {
+    .navPages ul {
+        margin-left: 60%;
+        width: 40%;
+        position: absolute;
+    }
+
+    .container_aside-main {
+        display: flex;
+    }
+    .asidePages {
+        width: 30%;
+    }
+
+    .asidePages ul {display: block;}
+
+    .main_content {
+        width: 70%;
+    }
+}
+

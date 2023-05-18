@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Functions</title>
+    <link rel="stylesheet" href="../style/stylePages.css">
+</head>
+<body>
+    <header class="headerPages">
+        <div class="headerBar">
+            <div class="logo">
+                <a href="../../index.html" class="logoLink">
+                    <i>&lt;Tech&gt;</i>
+                </a>
+            </div>
+            <div class="containerDark">
+                <input type="checkbox" class="checkbox" id="chk">
+                <label class="label" for="chk">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                    <div class="ball"></div>
+                </label>
+            </div>
+            <div class="containerMenu">
+                <img class="menuBurguer40px" style="display: block;" src="../icones/menu_FILL0_wght400_GRAD0_opsz40.svg" alt="abrir o menu">
+                
+                <img class="closeMenu40px" src="../icones/close_FILL0_wght500_GRAD0_opsz40.svg" alt="fechar menu">
+            </div>
+        </div>
+        <nav class="navPages">
+            <ul>
+                <li> <a href="javascript.html">Javascript</a></li>
+                <li> <a href="AJAX.html">Ajax</a></li>
+                <li> <a href="Async_Await.html">Async e Await</a></li>
+                <li> <a href="Classes.html">Classes</a></li>
+                <li> <a href="ferramentas_JS.html">Ferramentas JS</a></li>
+                <li> <a href="Frameworks_JS.html">Frameworks</a></li>
+                <li> <a href="Fundamentos_JavaScript.html">Fundamentos JS</a></li>
+                <li> <a href="Manipulação_do_DOM.html">Manipulação do DOM</a></li>
+                <li> <a href="POO.html">POO</a></li>
+                <li> <a href="Promises.html">Promises</a></li>
+                <li> <a href="segurança_em_JavaScript.html">Segurança em JS</a></li>
+                <li> <a href="Template_Literals.html">Template Literals</a></li>
+                <li> <a href="Teste_de_Unidade.html">Teste de Unidade</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container_aside-main">
+    <aside class="asidePages">
+        <ul>
+            <li><a href="../frontEnd.html">Front End</a></li>
+            <li><a href="../acessibilidade/acessibilidade.html">Acessibilidade</a></li>
+            <li><a href="../angular/angular.html">Angular</a></li>
+            <li><a href="../boasPraticasCodificacao/boasPraticas.html">Boas Praticas</a></li>
+            <li><a href="../css/css.html">CSS</a></li>
+            <li><a href="../designInterface/designIterface.html">design Interface</a></li>
+            <li><a href="../ferramentasFrontEnd/ferramentasFrontEnd.html">Ferramentas FrontEnd</a></li>
+            <li><a href="../html/html.html">HTML</a></li>
+            <li><a href="../javascript/javascript.html">Javascript</a></li>
+            <li><a href="../otimizacaoDesempenho/otimizacaoDesempenho.html">Otimização de Desempenho</a></li>
+            <li><a href="../react/react.html">React</a></li>
+            <li><a href="../SEO/SEO.html">SEO</a></li>
+            <li><a href="../vue/vue.html">Vue</a></li>
+        </ul>
+    </aside>
+    <main class="main_content">
+        <h1 class="title">Arrow Functions</h1>
+
+        <p>Arrow Functions, também conhecidas como "funções de seta" ou "funções flecha", são uma sintaxe mais curta e simplificada para criar funções em JavaScript, introduzida na versão ES6 do ECMAScript.</p>
+    
+        <p>A sintaxe de uma arrow function consiste em uma seta (=>) após a lista de parâmetros da função, seguida pelo corpo da função. Por exemplo:</p>
+    
+<pre><code>
+    // Exemplo de função normal
+    function soma(a, b) {
+        return a + b;
+    }
+
+    // Exemplo de arrow function
+    const soma = (a, b) => a + b;
+</code></pre>
+        
+        <p>Observe que, na arrow function, o corpo da função é expresso após a seta, e o uso das chaves e a palavra-chave return são opcionais, caso a função tenha apenas uma expressão que deve ser retornada.</p>
+    
+        <p>As arrow functions também possuem algumas particularidades em relação às funções normais. Por exemplo:</p>
+    
+        <p>O valor de this é determinado de forma diferente em arrow functions, geralmente assumindo o valor do contexto léxico (ou seja, o valor de this fora da função). Isso pode ser útil em alguns casos onde o comportamento de this é problemático ou confuso.</p>
+    
+        <p>Quando a arrow function tem apenas um parâmetro, os parênteses podem ser omitidos. Por exemplo:</p>
+    
+<pre><code>
+    // Exemplo com um parâmetro
+    const dobro = x => x * 2;
+
+    // Equivalente a:
+    const dobro = (x) => x * 2;
+</code></pre>
+        
+        <p>As arrow functions podem ser úteis para tornar o código mais conciso e legível, especialmente em casos onde a função é muito curta ou simples. No entanto, em casos mais complexos, as funções normais ainda podem ser mais adequadas.</p>
+    </main>
+    </div>
+    <footer>
+        <div class="container">
+                <h4>Sobre Nós</h4>
+                <p>Nosso blog é uma fonte de informações valiosas para desenvolvedores iniciantes e experientes, além de estudantes e entusiastas da área. Nós nos dedicamos a oferecer conteúdo atualizado e de qualidade para ajudá-lo a aprimorar suas habilidades e se manter à frente no mundo em constante mudança da programação e desenvolvimento de software.</p>
+
+                <p>Editado por <a href="https://www.linkedin.com/in/tiago-psouza-546706246?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BSqaWqSehTM2MOxjXCnxq1g%3D%3D">Tiago Souza.</a></p>
+            </div>
+            <div class="container2">
+                <h4>Contato</h4>
+                <ul>
+                <li><span>Telefone</span>: (61) 993160984</li>
+                <li><span>Email</span>: developer.tiagotech@gmail.com</li>
+                </ul>
+    </div>
+        
+</footer>
+<script src="../script/script.js"></script>
+<script src="https://kit.fontawesome.com/998c60ef77.js" crossorigin="anonymous"></script>
+</body>
+</html>

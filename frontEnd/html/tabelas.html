@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+    <link rel="stylesheet" href="../style/stylePages.css">
+</head>
+<body>
+    <header class="headerPages">
+      <div class="headerBar">
+        <div class="logo">
+          <a href="../../index.html" class="logoLink">
+              <i>&lt;Tech&gt;</i>
+          </a>
+      </div>
+        <div class="containerDark">
+          <input type="checkbox" class="checkbox" id="chk">
+          <label class="label" for="chk">
+              <i class="fas fa-moon"></i>
+              <i class="fas fa-sun"></i>
+              <div class="ball"></div>
+          </label>
+      </div>
+        <div class="containerMenu">
+            <img class="menuBurguer40px" style="display: block;" src="../icones/menu_FILL0_wght400_GRAD0_opsz40.svg" alt="abrir o menu">
+            
+            <img class="closeMenu40px" src="../icones/close_FILL0_wght500_GRAD0_opsz40.svg" alt="fechar menu">
+        </div>
+    </div> 
+        <nav class="navPages">
+        <ul>
+            <li><a href="html.html">HTML</a></li>
+            <li><a href="estrutura.html" target="_blank">Estrutura</a></li>
+            <li><a href="formulario.html" target="_blank">Formulário</a></li>
+            <li><a href="imagensMidia.html" target="_blank">Imagens e Midias</a></li>
+            <li><a href="acessibilidade.html" target="_blank">Acessibilidade</a></li>
+            <li><a href="semantico.html" target="_blank">HTML Semântico</a></li>
+            <li><a href="avancandoHTML5.html" target="_blank">Avançando em HTML5</a></li>
+            <li><a href="boasPraticas.html" target="_blank">Boas práticas em HTML</a></li>
+        </ul>
+    </nav>
+</header>
+<div class="container_aside-main">
+<aside class="asidePages">
+  <ul>
+    <li><a href="../frontEnd.html">Front End</a></li>
+    <li><a href="../acessibilidade/acessibilidade.html">Acessibilidade</a></li>
+    <li><a href="../angular/angular.html">Angular</a></li>
+    <li><a href="../boasPraticasCodificacao/boasPraticas.html">Boas Praticas</a></li>
+    <li><a href="../css/css.html">CSS</a></li>
+    <li><a href="../designInterface/designIterface.html">design Interface</a></li>
+    <li><a href="../ferramentasFrontEnd/ferramentasFrontEnd.html">Ferramentas FrontEnd</a></li>
+    <li><a href="../html/html.html">HTML</a></li>
+    <li><a href="../javascript/javascript.html">Javascript</a></li>
+    <li><a href="../otimizacaoDesempenho/otimizacaoDesempenho.html">Otimização de Desempenho</a></li>
+    <li><a href="../react/react.html">React</a></li>
+    <li><a href="../SEO/SEO.html">SEO</a></li>
+    <li><a href="../vue/vue.html">Vue</a></li>
+</ul>
+</aside>
+<main class="main_content">
+  <h1 class="title">Tabelas</h1>
+
+  <p>Para criar uma tabela HTML, você pode usar as tags &lt;table&gt;, &lt;tr&gt;, &lt;th&gt; e &lt;td&gt;. Aqui está um exemplo básico:</p> 
+
+<pre><code>
+  &lt;table&gt;
+      &lt;tr&gt;
+        &lt;th&gt;Nome&lt;/th&gt;
+        &lt;t&gt;>Idade&lt;/th&gt;
+        &lt;th&gt;País&lt;/th&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;João&lt;/td&gt;
+        &lt;td&gt;25&lt;/td&gt;
+        &lt;td&gt;Brasil&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;Maria&lt;/td&gt;
+        &lt;td&gt;30&lt;/td&gt;
+        &lt;td&gt;Portugal&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/table&gt;
+</code></pre>
+      
+  <p>Neste exemplo, &lt;table&gt; é a tag que define a tabela em si, &lt;tr&gt; define cada linha da tabela, &lt;th&gt; define o cabeçalho da coluna e &lt;td&gt; define as células com os dados da tabela. Note que a primeira linha dentro da tag &lt;table&gt; contém o cabeçalho da tabela (definido pelos &lt;th&gt;).</p> 
+      
+  <p>Para estilizar uma tabela HTML, você pode usar CSS. Aqui está um exemplo simples que define a cor de fundo da tabela e do cabeçalho da coluna:</p>
+      
+<pre><code>
+  &lt;style&gt;
+      table {
+        background-color: #f2f2f2;
+      }
+      
+      th {
+        background-color: #cccccc;
+      }
+    &lt;/style&gt;
+    
+    &lt;table&gt;
+      &lt;tr&gt;
+        &lt;th&gt;Nome&lt;/th&gt;
+        &lt;t&gt;>Idade&lt;/th&gt;
+        &lt;th&gt;País&lt;/th&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;João&lt;/td&gt;
+        &lt;td&gt;25&lt;/td&gt;
+        &lt;td&gt;Brasil&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;Maria&lt;/td&gt;
+        &lt;td&gt;30&lt;/td&gt;
+        &lt;td&gt;Portugal&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/table&gt;
+</code></pre> 
+      
+  <p>Neste exemplo, a tag &lt;style&gt; é usada para definir o estilo da tabela. O seletor table define o estilo para toda a tabela, enquanto o seletor th define o estilo apenas para os cabeçalhos da coluna.</p> 
+      
+  <p>Essas são apenas algumas das técnicas de criação e estilização de tabelas HTML. Há muito mais que pode ser feito, dependendo das suas necessidades específicas.</p> 
+</main>
+</div>
+<footer>
+  <div class="container">
+          <h4>Sobre Nós</h4>
+          <p>Nosso blog é uma fonte de informações valiosas para desenvolvedores iniciantes e experientes, além de estudantes e entusiastas da área. Nós nos dedicamos a oferecer conteúdo atualizado e de qualidade para ajudá-lo a aprimorar suas habilidades e se manter à frente no mundo em constante mudança da programação e desenvolvimento de software.</p>
+
+          <p>Editado por <a href="https://www.linkedin.com/in/tiago-psouza-546706246?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BSqaWqSehTM2MOxjXCnxq1g%3D%3D">Tiago Souza.</a></p>
+      </div>
+      <div class="container2">
+          <h4>Contato</h4>
+          <ul>
+          <li><span>Telefone</span>: (61) 993160984</li>
+          <li><span>Email</span>: developer.tiagotech@gmail.com</li>
+          </ul>
+</div>
+  
+</footer>
+<script src="../script/script.js"></script>
+<script src="https://kit.fontawesome.com/998c60ef77.js" crossorigin="anonymous"></script>
+</body>
+</html>

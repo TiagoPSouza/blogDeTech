@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciclo de vida do componente</title>
+    <link rel="stylesheet" href="../style/stylePages.css">
+</head>
+<body>
+    <header class="headerPages">
+      <div class="headerBar">
+        <div class="logo">
+          <a href="../../index.html" class="logoLink">
+              <i>&lt;Tech&gt;</i>
+          </a>
+      </div>
+        <div class="containerDark">
+          <input type="checkbox" class="checkbox" id="chk">
+          <label class="label" for="chk">
+              <i class="fas fa-moon"></i>
+              <i class="fas fa-sun"></i>
+              <div class="ball"></div>
+          </label>
+      </div>
+        <div class="containerMenu">
+            <img class="menuBurguer40px" style="display: block;" src="../icones/menu_FILL0_wght400_GRAD0_opsz40.svg" alt="abrir o menu">
+            
+            <img class="closeMenu40px" src="../icones/close_FILL0_wght500_GRAD0_opsz40.svg" alt="fechar menu">
+        </div>
+    </div>
+        <nav class="navPages">
+        <ul>
+            <li> <a href="vue.html">vue</a></li>
+            <li> <a href="Componentes.html">Componentes</a></li>
+            <li> <a href="Data_binding.html">Data Binding</a></li>
+            <li> <a href="Diretivas.html">Diretivas</a></li>
+            <li> <a href="Gerenciamento_estado.html">Gerenciamento de Estado</a></li>
+            <li> <a href="Roteamento.html">Roteamento</a></li>
+        </ul>
+    </nav>
+</header>
+<div class="container_aside-main">
+<aside class="asidePages">
+  <ul>
+    <li><a href="../frontEnd.html">Front End</a></li>
+    <li><a href="../acessibilidade/acessibilidade.html">Acessibilidade</a></li>
+    <li><a href="../angular/angular.html">Angular</a></li>
+    <li><a href="../boasPraticasCodificacao/boasPraticas.html">Boas Praticas</a></li>
+    <li><a href="../css/css.html">CSS</a></li>
+    <li><a href="../designInterface/designIterface.html">design Interface</a></li>
+    <li><a href="../ferramentasFrontEnd/ferramentasFrontEnd.html">Ferramentas FrontEnd</a></li>
+    <li><a href="../html/html.html">HTML</a></li>
+    <li><a href="../javascript/javascript.html">Javascript</a></li>
+    <li><a href="../otimizacaoDesempenho/otimizacaoDesempenho.html">Otimização de Desempenho</a></li>
+    <li><a href="../react/react.html">React</a></li>
+    <li><a href="../SEO/SEO.html">SEO</a></li>
+    <li><a href="../vue/vue.html">Vue</a></li>
+</ul>
+</aside>
+<main class="main_content">
+    <h1 class="title">Ciclo de vida do componente</h1>
+
+    <p>Em Vue, o ciclo de vida do componente é o conjunto de etapas que um componente passa desde a sua criação até a sua destruição. Cada etapa do ciclo de vida é representada por um gancho (hook) que permite que o desenvolvedor execute código em momentos específicos do ciclo de vida do componente.</p>
+
+    <p>Os principais ganchos do ciclo de vida do componente Vue são os seguintes:</p>
+    
+    <p>beforeCreate: este gancho é chamado antes que o componente seja inicializado. Nesta fase, o componente ainda não está acessível e não tem estado ou propriedades.</p>
+    <p>created: este gancho é chamado após o componente ser inicializado e as suas propriedades e estado terem sido definidos. Nesta fase, o componente ainda não foi adicionado ao DOM.</p>
+    <p>beforeMount: este gancho é chamado antes do componente ser adicionado ao DOM. Nesta fase, o componente já foi renderizado, mas ainda não está visível no DOM.</p>
+    <p>mounted: este gancho é chamado depois que o componente é adicionado ao DOM. Nesta fase, o componente está disponível no DOM e pode ser acessado por meio do seu seletor.</p>
+    <p>beforeUpdate: este gancho é chamado antes que o componente seja atualizado, geralmente em resposta a mudanças em suas propriedades ou estado.</p>
+    <p>updated: este gancho é chamado depois que o componente é atualizado. Nesta fase, o componente já foi renderizado novamente e quaisquer mudanças foram aplicadas no DOM.</p>
+    <p>beforeDestroy: este gancho é chamado antes do componente ser destruído e removido do DOM.</p>
+    <p>destroyed: este gancho é chamado depois que o componente foi destruído e removido do DOM.</p>
+    <p>A seguir, um exemplo de como usar os ganchos do ciclo de vida em um componente Vue:</p>
+    
+<pre><code>
+  &lt;template&gt;
+      &lt;div&gt;
+        &lt;p&gt;Counter: {{ count }}&lt;/p&gt;
+        &lt;button @click="increment"&gt;Increment&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/template&gt;
+    
+    &lt;script*&gt;
+    export default {
+      data() {
+        return {
+          count: 0,
+        };
+      },
+      beforeCreate() {
+        console.log('beforeCreate');
+      },
+      created() {
+        console.log('created');
+      },
+      beforeMount() {
+        console.log('beforeMount');
+      },
+      mounted() {
+        console.log('mounted');
+      },
+      beforeUpdate() {
+        console.log('beforeUpdate');
+      },
+      updated() {
+        console.log('updated');
+      },
+      beforeDestroy() {
+        console.log('beforeDestroy');
+      },
+      destroyed() {
+        console.log('destroyed');
+      },
+      methods: {
+        increment() {
+          this.count++;
+        },
+      },
+    };
+    &lt;/script&gt;
+</code></pre>
+    
+    <p>Neste exemplo, estamos definindo um componente "Counter" com um contador simples e implementando todos os ganchos do ciclo de vida. Quando este componente é inicializado e renderizado no DOM, a sequência de ganchos do ciclo de vida será chamada na seguinte ordem: "beforeCreate", "created", "beforeMount", "mounted". Em seguida, cada vez que o botão "Increment" é clicado, os ganchos "beforeUpdate" e "updated" são chamados. Quando o componente é destruído, os ganchos "beforeDestroy" e "destroyed" são chamados. O console exibirá a ordem de cada gancho do ciclo de vida à medida que é chamado.</p>
+</main>
+</div>
+<footer>
+  <div class="container">
+      <h4>Sobre Nós</h4>
+      <p>Nosso blog é uma fonte de informações valiosas para desenvolvedores iniciantes e experientes, além de estudantes e entusiastas da área. Nós nos dedicamos a oferecer conteúdo atualizado e de qualidade para ajudá-lo a aprimorar suas habilidades e se manter à frente no mundo em constante mudança da programação e desenvolvimento de software.</p>
+
+      <p>Editado por <a href="https://www.linkedin.com/in/tiago-psouza-546706246?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BSqaWqSehTM2MOxjXCnxq1g%3D%3D">Tiago Souza.</a></p>
+  </div>
+  <div class="container2">
+      <h4>Contato</h4>
+      <ul>
+          <li><span>Telefone</span>: (61) 993160984</li>
+          <li><span>Email</span>: developer.tiagotech@gmail.com</li>
+      </ul>
+  </div>
+</footer>
+<script src="../script/script.js"></script>
+<script src="https://kit.fontawesome.com/998c60ef77.js" crossorigin="anonymous"></script>
+</body>
+</html>

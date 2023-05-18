@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pipe em Angular</title>
+    <link rel="stylesheet" href="../style/stylePages.css">
+</head>
+<body>
+    <header class="headerPages">
+        <div class="headerBar">
+            <div class="logo">
+                <a href="../../index.html" class="logoLink">
+                    <i>&lt;Tech&gt;</i>
+                </a>
+            </div>
+            <div class="containerDark">
+                <input type="checkbox" class="checkbox" id="chk">
+                <label class="label" for="chk">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                    <div class="ball"></div>
+                </label>
+            </div>
+            <div class="containerMenu">
+                <img class="menuBurguer40px" style="display: block;" src="../icones/menu_FILL0_wght400_GRAD0_opsz40.svg" alt="abrir o menu">
+                
+                <img class="closeMenu40px" src="../icones/close_FILL0_wght500_GRAD0_opsz40.svg" alt="fechar menu">
+            </div>
+        </div>
+        <nav class="navPages">
+            <ul>
+                <li> <a href="angular.html">Angular</a></li>
+                <li> <a href="componentes.html">Componentes</a></li>
+                <li> <a href="diretivas.html">Diretivas</a></li>
+                <li> <a href="injecao.html">Injeção</a></li>
+                <li> <a href="modulos.html">Modulos</a></li>
+                <li> <a href="observables .html">Observables</a></li>
+                <li> <a href="rotas.html">Rotas</a></li>
+                <li> <a href="servicos.html">Serviços</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container_aside-main">
+    <aside class="asidePages">
+        <ul>
+            <li><a href="../frontEnd.html">Front End</a></li>
+            <li><a href="../acessibilidade/acessibilidade.html">Acessibilidade</a></li>
+            <li><a href="../angular/angular.html">Angular</a></li>
+            <li><a href="../boasPraticasCodificacao/boasPraticas.html">Boas Praticas</a></li>
+            <li><a href="../css/css.html">CSS</a></li>
+            <li><a href="../designInterface/designIterface.html">design Interface</a></li>
+            <li><a href="../ferramentasFrontEnd/ferramentasFrontEnd.html">Ferramentas FrontEnd</a></li>
+            <li><a href="../html/html.html">HTML</a></li>
+            <li><a href="../javascript/javascript.html">Javascript</a></li>
+            <li><a href="../otimizacaoDesempenho/otimizacaoDesempenho.html">Otimização de Desempenho</a></li>
+            <li><a href="../react/react.html">React</a></li>
+            <li><a href="../SEO/SEO.html">SEO</a></li>
+            <li><a href="../vue/vue.html">Vue</a></li>
+        </ul>
+    </aside>
+    <main class="main_content">
+        <h1 class="title">Pipe em Angular</h1>
+
+        <p>Em Angular, um pipe é uma classe que transforma o valor de entrada em um valor de saída com base em alguma lógica definida pelo programador. Os pipes são usados para formatar dados e apresentá-los de forma mais adequada para o usuário. Alguns exemplos de pipes embutidos no Angular são o date, currency e uppercase.</p> 
+    
+        <p>Para usar um pipe em um módulo Angular, primeiro é preciso definir o pipe em seu próprio arquivo TypeScript. Por exemplo, considere o seguinte pipe simples que converte um valor em graus Celsius para Fahrenheit:</p> 
+    
+<pre><code>
+    import { Pipe, PipeTransform } from '@angular/core';
+
+    @Pipe({ name: 'celsiusToFahrenheit' })
+    export class CelsiusToFahrenheitPipe implements PipeTransform {
+        transform(value: number): number {
+          return (value * 9 / 5) + 32;
+        }
+      }
+</code></pre>
+    
+        <p>Nesse exemplo, estamos definindo um pipe chamado CelsiusToFahrenheitPipe que converte valores em graus Celsius para Fahrenheit. O pipe é definido com o nome celsiusToFahrenheit e implementa a interface PipeTransform, que exige a implementação do método transform. Esse método recebe o valor de entrada como parâmetro e retorna o valor de saída transformado.</p> 
+    
+        <p>Para usar esse pipe em um módulo Angular, basta importá-lo no arquivo do módulo e declará-lo na seção declarations do módulo. Por exemplo:</p> 
+    
+<pre><code>
+    import { NgModule } from '@angular/core';
+    import { BrowserModule } from '@angular/platform-browser';
+    import { CelsiusToFahrenheitPipe } from './celsius-to-fahrenheit.pipe';
+
+    @NgModule({
+        declarations: [CelsiusToFahrenheitPipe],
+        imports: [BrowserModule],
+        bootstrap: [AppComponent]
+    })
+    export class AppModule { }
+</code></pre>
+    
+        <p>Nesse exemplo, estamos definindo um módulo chamado AppModule que declara o pipe CelsiusToFahrenheitPipe. O pipe é importado do arquivo celsius-to-fahrenheit.pipe.ts e adicionado à seção declarations do módulo. O módulo também importa o módulo BrowserModule.</p> 
+    </main>
+    </div>
+    <footer>
+        <div class="container">
+                <h4>Sobre Nós</h4>
+                <p>Nosso blog é uma fonte de informações valiosas para desenvolvedores iniciantes e experientes, além de estudantes e entusiastas da área. Nós nos dedicamos a oferecer conteúdo atualizado e de qualidade para ajudá-lo a aprimorar suas habilidades e se manter à frente no mundo em constante mudança da programação e desenvolvimento de software.</p>
+
+                <p>Editado por <a href="https://www.linkedin.com/in/tiago-psouza-546706246?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BSqaWqSehTM2MOxjXCnxq1g%3D%3D">Tiago Souza.</a></p>
+            </div>
+            <div class="container2">
+                <h4>Contato</h4>
+                <ul>
+                <li><span>Telefone</span>: (61) 993160984</li>
+                <li><span>Email</span>: developer.tiagotech@gmail.com</li>
+                </ul>
+    </div>
+        
+</footer>
+<script src="../script/script.js"></script>
+<script src="https://kit.fontawesome.com/998c60ef77.js" crossorigin="anonymous"></script>
+</body>
+</html>

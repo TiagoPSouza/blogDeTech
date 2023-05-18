@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <link rel="stylesheet" href="../style/stylePages.css">
+</head>
+<body>
+    <header class="headerPages">
+        <div class="headerBar">
+            <div class="logo">
+                <a href="../../index.html" class="logoLink">
+                    <i>&lt;Tech&gt;</i>
+                </a>
+            </div>
+            <div class="containerDark">
+                <input type="checkbox" class="checkbox" id="chk">
+                <label class="label" for="chk">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                    <div class="ball"></div>
+                </label>
+            </div>
+            <div class="containerMenu">
+                <img class="menuBurguer40px" style="display: block;" src="../icones/menu_FILL0_wght400_GRAD0_opsz40.svg" alt="abrir o menu">
+                
+                <img class="closeMenu40px" src="../icones/close_FILL0_wght500_GRAD0_opsz40.svg" alt="fechar menu">
+            </div>
+        </div>
+        <nav class="navPages">
+            <ul>
+                <li> <a href="css.html">CSS</a></li>
+                <li> <a href="Animações_e_Transicoes.html">Animações e Transições</a></li>
+                <li> <a href="Box_Model.html">Box Model</a></li>
+                <li> <a href="CSS_Arquitetura.html">Arquitetura CSS</a></li>
+                <li> <a href="ferramentas_devCSS.html">Ferramentas devCSS</a></li>
+                <li> <a href="Grid.html">Grid</a></li>
+                <li> <a href="Pre-processadores_CSS.html">Pre-processadores</a></li>
+                <li> <a href="Responsividade.html">Responsividade</a></li>
+                <li> <a href="Seletores_CSS.html">Seletores CSS</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container_aside-main">
+    <aside class="asidePages">
+        <ul>
+            <li><a href="../frontEnd.html">Front End</a></li>
+            <li><a href="../acessibilidade/acessibilidade.html">Acessibilidade</a></li>
+            <li><a href="../angular/angular.html">Angular</a></li>
+            <li><a href="../boasPraticasCodificacao/boasPraticas.html">Boas Praticas</a></li>
+            <li><a href="../css/css.html">CSS</a></li>
+            <li><a href="../designInterface/designIterface.html">design Interface</a></li>
+            <li><a href="../ferramentasFrontEnd/ferramentasFrontEnd.html">Ferramentas FrontEnd</a></li>
+            <li><a href="../html/html.html">HTML</a></li>
+            <li><a href="../javascript/javascript.html">Javascript</a></li>
+            <li><a href="../otimizacaoDesempenho/otimizacaoDesempenho.html">Otimização de Desempenho</a></li>
+            <li><a href="../react/react.html">React</a></li>
+            <li><a href="../SEO/SEO.html">SEO</a></li>
+            <li><a href="../vue/vue.html">Vue</a></li>
+        </ul>
+    </aside>
+    <main class="main_content">
+        <h1 class="title">Flexbox</h1>
+
+        <p>Flexbox é um recurso do CSS que permite criar layouts flexíveis e responsivos em páginas da web. Ele é usado para alinhar e distribuir elementos em um contêiner de acordo com as necessidades do layout, independentemente do tamanho da tela ou dispositivo usado pelo usuário.</p>
+    
+        <p>Os elementos de um contêiner flexível são organizados em um ou mais eixos, que podem ser horizontal (eixo X) ou vertical (eixo Y). O contêiner flexível é definido pelo elemento pai (por exemplo, um div) que envolve os elementos filho que serão organizados usando o Flexbox.</p>
+    
+        <p>Para usar o Flexbox, é necessário definir algumas propriedades no elemento pai, como display: flex. Isso faz com que os elementos filho sejam organizados em uma única linha ou coluna, dependendo do eixo definido. Em seguida, outras propriedades, como justify-content e align-items, podem ser usadas para alinhar e distribuir os elementos no contêiner.</p>
+    
+        <p>Algumas das vantagens do Flexbox incluem:</p>
+    
+        <p>Facilidade de uso: o Flexbox é relativamente fácil de aprender e usar, permitindo que desenvolvedores criem layouts complexos sem muita dificuldade.</p>
+    
+        <p>Responsividade: o Flexbox permite criar layouts responsivos, que se adaptam a diferentes tamanhos de tela, sem a necessidade de utilizar media queries.</p>
+    
+        <p>Flexibilidade: o Flexbox permite uma grande flexibilidade na organização dos elementos, permitindo que sejam facilmente alterados sem afetar o restante do layout.</p>
+    
+        <p>Performance: o Flexbox é muito leve e não afeta a performance da página, mesmo em layouts mais complexos.</p>
+    
+        <p>No entanto, é importante lembrar que o Flexbox não é a solução para todos os tipos de layouts. Dependendo do tipo de layout, outras técnicas de layout em CSS, como o Grid Layout, podem ser mais apropriadas.</p>
+    </main>
+    </div>
+    <footer>
+        <div class="container">
+                <h4>Sobre Nós</h4>
+                <p>Nosso blog é uma fonte de informações valiosas para desenvolvedores iniciantes e experientes, além de estudantes e entusiastas da área. Nós nos dedicamos a oferecer conteúdo atualizado e de qualidade para ajudá-lo a aprimorar suas habilidades e se manter à frente no mundo em constante mudança da programação e desenvolvimento de software.</p>
+
+                <p>Editado por <a href="https://www.linkedin.com/in/tiago-psouza-546706246?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BSqaWqSehTM2MOxjXCnxq1g%3D%3D">Tiago Souza.</a></p>
+            </div>
+            <div class="container2">
+                <h4>Contato</h4>
+                <ul>
+                <li><span>Telefone</span>: (61) 993160984</li>
+                <li><span>Email</span>: developer.tiagotech@gmail.com</li>
+                </ul>
+    </div>
+        
+</footer>
+<script src="../script/script.js"></script>
+<script src="https://kit.fontawesome.com/998c60ef77.js" crossorigin="anonymous"></script>
+</body>
+</html>

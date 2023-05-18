@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de estado</title>
+    <link rel="stylesheet" href="../style/stylePages.css">
+</head>
+<body>
+    <header class="headerPages">
+      <div class="headerBar">
+        <div class="logo">
+          <a href="../../index.html" class="logoLink">
+              <i>&lt;Tech&gt;</i>
+          </a>
+      </div>
+        <div class="containerDark">
+          <input type="checkbox" class="checkbox" id="chk">
+          <label class="label" for="chk">
+              <i class="fas fa-moon"></i>
+              <i class="fas fa-sun"></i>
+              <div class="ball"></div>
+          </label>
+      </div>
+        <div class="containerMenu">
+            <img class="menuBurguer40px" style="display: block;" src="../icones/menu_FILL0_wght400_GRAD0_opsz40.svg" alt="abrir o menu">
+            
+            <img class="closeMenu40px" src="../icones/close_FILL0_wght500_GRAD0_opsz40.svg" alt="fechar menu">
+        </div>
+    </div>
+        <nav class="navPages">
+        <ul>
+            <li> <a href="vue.html">vue</a></li>
+            <li> <a href="Ciclo_componente.html">Ciclo Componente</a></li>
+            <li> <a href="Componentes.html">Componentes</a></li>
+            <li> <a href="Data_binding.html">Data Binding</a></li>
+            <li> <a href="Diretivas.html">Diretivas</a></li>
+            <li> <a href="Roteamento.html">Roteamento</a></li>
+        </ul>
+    </nav>
+</header>
+<div class="container_aside-main">
+<aside class="asidePages">
+  <ul>
+    <li><a href="../frontEnd.html">Front End</a></li>
+    <li><a href="../acessibilidade/acessibilidade.html">Acessibilidade</a></li>
+    <li><a href="../angular/angular.html">Angular</a></li>
+    <li><a href="../boasPraticasCodificacao/boasPraticas.html">Boas Praticas</a></li>
+    <li><a href="../css/css.html">CSS</a></li>
+    <li><a href="../designInterface/designIterface.html">design Interface</a></li>
+    <li><a href="../ferramentasFrontEnd/ferramentasFrontEnd.html">Ferramentas FrontEnd</a></li>
+    <li><a href="../html/html.html">HTML</a></li>
+    <li><a href="../javascript/javascript.html">Javascript</a></li>
+    <li><a href="../otimizacaoDesempenho/otimizacaoDesempenho.html">Otimização de Desempenho</a></li>
+    <li><a href="../react/react.html">React</a></li>
+    <li><a href="../SEO/SEO.html">SEO</a></li>
+    <li><a href="../vue/vue.html">Vue</a></li>
+</ul>
+</aside>
+<main class="main_content">
+  <h1 class="title">Gerenciamento de estado</h1>
+
+  <p>O gerenciamento de estado é um aspecto crucial do desenvolvimento de aplicativos web, e é particularmente importante em aplicativos grandes e complexos. O gerenciamento de estado refere-se à forma como um aplicativo gerencia e mantém o estado global e local de seus componentes, e como esses estados são atualizados e sincronizados ao longo do tempo.</p>
+
+  <p>Em Vue, o gerenciamento de estado é geralmente realizado usando o Vuex, que é uma biblioteca de gerenciamento de estado inspirada no Flux e no Redux. O Vuex fornece uma maneira centralizada de gerenciar o estado de um aplicativo Vue, e inclui recursos como store, actions, mutations e getters.</p>
+  
+  <p>O Vuex é implementado como um padrão de arquitetura de fluxo unidirecional. Isso significa que os dados fluem em uma única direção, do store para os componentes, e as atualizações de estado são feitas por meio de mutações. As ações podem ser usadas para chamar mutações de forma assíncrona e getters podem ser usados para recuperar dados do estado de forma síncrona.</p>
+  
+  <p>Aqui está um exemplo simples de como usar o Vuex em um aplicativo Vue:</p>
+  
+<pre>
+  <code>
+    import Vue from 'vue';
+    import Vuex from 'vuex';
+    
+    Vue.use(Vuex);
+    
+    const store = new Vuex.Store({
+      state: {
+        count: 0,
+      },
+      mutations: {
+        increment(state) {
+          state.count++;
+        },
+        decrement(state) {
+          state.count--;
+        },
+      },
+      actions: {
+        incrementAsync(context) {
+          setTimeout(() => {
+            context.commit('increment');
+          }, 1000);
+        },
+      },
+      getters: {
+        evenOrOdd: (state) => (state.count % 2 === 0 ? 'even' : 'odd'),
+      },
+    });
+    
+    export default store;
+</code>  
+</pre>
+  
+  <p>Neste exemplo, estamos definindo um store Vuex com um estado inicial de "count" definido como 0, duas mutações para incrementar e decrementar o valor de "count", uma ação para incrementar o valor de "count" de forma assíncrona depois de 1 segundo, e um getter para calcular se o valor de "count" é par ou ímpar.</p>
+  
+  <p>Em um componente Vue, podemos acessar o estado do store Vuex usando a opção "computed", e podemos chamar as mutações ou ações usando a opção "methods". Por exemplo, para usar o store Vuex no componente "Counter", podemos fazer o seguinte:</p>
+  
+<pre>
+  <code>
+    &lt;template&gt;
+        &lt;div&gt;
+          &lt;p&gt;Count: {{ count }}&lt;/p&gt;
+          &lt;p&gt;Even or odd: {{ evenOrOdd }}&lt;/p&gt;
+          &lt;button @click="increment"&gt;+&lt;/button&gt;
+          &lt;button @click="decrement"&gt;-&lt;/button&gt;
+          &lt;button @click="incrementAsync"&gt;+ Async&lt;/button&gt;
+        &lt;/div&gt;
+      &lt;/template&gt;
+      
+      &lt;script&gt;
+      import { mapState, mapMutations, mapActions, mapGetters } from 'vuex';
+      
+      export default {
+        computed: {
+          ...mapState(['count']),
+          ...mapGetters(['evenOrOdd']),
+        },
+        methods: {
+          ...mapMutations(['increment', 'decrement']),
+          ...mapActions(['incrementAsync']),
+        },
+      };
+      &lt;/script&gt;
+</code>  
+</pre>
+  
+  <p>Aqui, estamos usando as funções de utilitário "mapState", "mapMutations", "mapActions" e "mapGetters" para mapear o estado, mutações, ações e getters do store Vuex para as propriedades e métodos do componente Vue.</p>
+</main>
+</div>
+<footer>
+  <div class="container">
+      <h4>Sobre Nós</h4>
+      <p>Nosso blog é uma fonte de informações valiosas para desenvolvedores iniciantes e experientes, além de estudantes e entusiastas da área. Nós nos dedicamos a oferecer conteúdo atualizado e de qualidade para ajudá-lo a aprimorar suas habilidades e se manter à frente no mundo em constante mudança da programação e desenvolvimento de software.</p>
+
+      <p>Editado por <a href="https://www.linkedin.com/in/tiago-psouza-546706246?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BSqaWqSehTM2MOxjXCnxq1g%3D%3D">Tiago Souza.</a></p>
+  </div>
+  <div class="container2">
+      <h4>Contato</h4>
+      <ul>
+          <li><span>Telefone</span>: (61) 993160984</li>
+          <li><span>Email</span>: developer.tiagotech@gmail.com</li>
+      </ul>
+  </div>
+</footer>
+<script src="../script/script.js"></script>
+<script src="https://kit.fontawesome.com/998c60ef77.js" crossorigin="anonymous"></script>
+</body>
+</html>

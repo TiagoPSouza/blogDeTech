@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+    <link rel="stylesheet" href="../style/stylePages.css">
+</head>
+<body>
+    <header class="headerPages">
+      <div class="headerBar">
+        <div class="logo">
+          <a href="../../index.html" class="logoLink">
+              <i>&lt;Tech&gt;</i>
+          </a>
+      </div>
+        <div class="containerDark">
+          <input type="checkbox" class="checkbox" id="chk">
+          <label class="label" for="chk">
+              <i class="fas fa-moon"></i>
+              <i class="fas fa-sun"></i>
+              <div class="ball"></div>
+          </label>
+      </div>
+        <div class="containerMenu">
+            <img class="menuBurguer40px" style="display: block;" src="../icones/menu_FILL0_wght400_GRAD0_opsz40.svg" alt="abrir o menu">
+            
+            <img class="closeMenu40px" src="../icones/close_FILL0_wght500_GRAD0_opsz40.svg" alt="fechar menu">
+        </div>
+    </div>
+        <nav class="navPages">
+        <ul>
+            <li> <a href="react.html">React</a></li>
+            <li> <a href="Ciclo_de_vida_comp.html">Ciclo de vida do componente</a></li>
+            <li> <a href="Componentes_React.html">Componentes React</a></li>
+            <li> <a href="Context_API.html">Context API</a></li>
+            <li> <a href="Hooks.html">Hooks</a></li>
+            <li> <a href="HTML-like.html">HTML-like</a></li>
+            <li> <a href="JSX.html">JSX</a></li>
+            <li> <a href="metodo_render.html">Método render</a></li>
+            <li> <a href="Props.html">Props</a></li>
+            <li> <a href="React_Router.html">React Router</a></li>
+            <li> <a href="Renderizacao.html">Renderizacao</a></li>
+            <li> <a href="State.html">State</a></li>
+            <li> <a href="MobX/MobX.html">MobX</a></li>
+            <li> <a href="redux/redux.html">Redux</a></li>
+        </ul>
+    </nav>
+</header>
+<div class="container_aside-main">
+<aside class="asidePages">
+  <ul>
+    <li><a href="../frontEnd.html">Front End</a></li>
+    <li><a href="../acessibilidade/acessibilidade.html">Acessibilidade</a></li>
+    <li><a href="../angular/angular.html">Angular</a></li>
+    <li><a href="../boasPraticasCodificacao/boasPraticas.html">Boas Praticas</a></li>
+    <li><a href="../css/css.html">CSS</a></li>
+    <li><a href="../designInterface/designIterface.html">design Interface</a></li>
+    <li><a href="../ferramentasFrontEnd/ferramentasFrontEnd.html">Ferramentas FrontEnd</a></li>
+    <li><a href="../html/html.html">HTML</a></li>
+    <li><a href="../javascript/javascript.html">Javascript</a></li>
+    <li><a href="../otimizacaoDesempenho/otimizacaoDesempenho.html">Otimização de Desempenho</a></li>
+    <li><a href="../react/react.html">React</a></li>
+    <li><a href="../SEO/SEO.html">SEO</a></li>
+    <li><a href="../vue/vue.html">Vue</a></li>
+  </ul>
+</aside>
+<main class="main_content">
+  <h1 class="title">Eventos</h1>
+
+  <p>Os eventos são uma parte importante da programação em React e são usados para lidar com interações do usuário, como cliques de botão, digitação de texto e rolagem de página. Em React, os eventos são tratados como propriedades dos elementos e são definidos usando a sintaxe JSX.</p>
+
+  <p>Por exemplo, um componente que exibe um botão pode ser definido da seguinte forma:</p>
+  
+<pre><code>
+  import React from 'react';
+
+  function MeuBotao(props) {
+    function handleClick() {
+      console.log('O botão foi clicado!');
+    }
+  
+    return (
+      &lt;button onClick={handleClick}&gt;
+        {props.texto}
+      &lt;/button&gt;
+    );
+  }
+</code></pre>
+  
+  <p>Nesse exemplo, o componente MeuBotao recebe uma prop texto e define uma função handleClick que é chamada quando o botão é clicado. O evento onClick é definido como uma propriedade do elemento button e é definido para chamar a função handleClick quando o botão é clicado.</p>
+  
+  <p>Além do onClick, existem muitos outros eventos disponíveis em React, incluindo onChange, onSubmit, onKeyDown, onFocus, entre outros. Cada evento tem seu próprio conjunto de propriedades e comportamentos específicos.</p>
+  
+  <p>Os eventos em React seguem a mesma convenção de nomenclatura do JavaScript, ou seja, são camelCase e não usam prefixo on. Por exemplo, em vez de onload e onclick, React usa onLoad e onClick.</p>
+  
+  <p>Também é possível passar parâmetros personalizados para a função de tratamento de eventos usando o conceito de closures em JavaScript. Por exemplo:</p>
+  
+<pre><code>
+  import React from 'react';
+  
+  function MeuBotao(props) {
+    function handleClick(id) {
+      console.log(`O botão ${id} foi clicado!`);
+    }
+          
+    return (
+      &lt;button onClick={() =&gt; handleClick(props.id)}&gt;
+        {props.texto}
+        &lt;/button&gt;
+    );
+    }
+      </code></pre>
+  
+  <p>Nesse exemplo, a função handleClick é definida para receber um parâmetro id, que é passado para a função usando uma closure em JavaScript. Quando o botão é clicado, a função handleClick é chamada com o id correspondente ao botão clicado.</p>
+  
+  <p>Em resumo, os eventos são uma parte importante da programação em React e são usados para lidar com interações do usuário. Os eventos são tratados como propriedades dos elementos e são definidos usando a sintaxe JSX. Em React, existem muitos eventos disponíveis, cada um com seu próprio conjunto de propriedades e comportamentos específicos.</p>
+</main>
+</div>
+<footer>
+  <div class="container">
+      <h4>Sobre Nós</h4>
+      <p>Nosso blog é uma fonte de informações valiosas para desenvolvedores iniciantes e experientes, além de estudantes e entusiastas da área. Nós nos dedicamos a oferecer conteúdo atualizado e de qualidade para ajudá-lo a aprimorar suas habilidades e se manter à frente no mundo em constante mudança da programação e desenvolvimento de software.</p>
+
+      <p>Editado por <a href="https://www.linkedin.com/in/tiago-psouza-546706246?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BSqaWqSehTM2MOxjXCnxq1g%3D%3D">Tiago Souza.</a></p>
+  </div>
+  <div class="container2">
+      <h4>Contato</h4>
+      <ul>
+          <li><span>Telefone</span>: (61) 993160984</li>
+          <li><span>Email</span>: developer.tiagotech@gmail.com</li>
+      </ul>
+  </div>
+</footer>
+<script src="../script/script.js"></script>
+<script src="https://kit.fontawesome.com/998c60ef77.js" crossorigin="anonymous"></script>
+</body>
+</html>

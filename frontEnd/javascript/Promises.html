@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promises</title>
+    <link rel="stylesheet" href="../style/stylePages.css">
+</head>
+<body>
+    <header class="headerPages">
+        <div class="headerBar">
+            <div class="logo">
+                <a href="../../index.html" class="logoLink">
+                    <i>&lt;Tech&gt;</i>
+                </a>
+            </div>
+            <div class="containerDark">
+                <input type="checkbox" class="checkbox" id="chk">
+                <label class="label" for="chk">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                    <div class="ball"></div>
+                </label>
+            </div>
+            <div class="containerMenu">
+                <img class="menuBurguer40px" style="display: block;" src="../icones/menu_FILL0_wght400_GRAD0_opsz40.svg" alt="abrir o menu">
+                
+                <img class="closeMenu40px" src="../icones/close_FILL0_wght500_GRAD0_opsz40.svg" alt="fechar menu">
+            </div>
+        </div>
+        <nav class="navPages">
+            <ul>
+                <li> <a href="javascript.html">Javascript</a></li>
+                <li> <a href="AJAX.html">Ajax</a></li>
+                <li> <a href="Arrow_Functions.html">Arrow Functions</a></li>
+                <li> <a href="Async_Await.html">Async e Await</a></li>
+                <li> <a href="Classes.html">Classes</a></li>
+                <li> <a href="ferramentas_JS.html">Ferramentas JS</a></li>
+                <li> <a href="Frameworks_JS.html">Frameworks</a></li>
+                <li> <a href="Fundamentos_JavaScript.html">Fundamentos JS</a></li>
+                <li> <a href="Manipulação_do_DOM.html">Manipulação do DOM</a></li>
+                <li> <a href="POO.html">POO</a></li>
+                <li> <a href="segurança_em_JavaScript.html">Segurança em JS</a></li>
+                <li> <a href="Template_Literals.html">Template Literals</a></li>
+                <li> <a href="Teste_de_Unidade.html">Teste de Unidade</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container_aside-main">
+    <aside class="asidePages">
+        <ul>
+            <li><a href="../frontEnd.html">Front End</a></li>
+            <li><a href="../acessibilidade/acessibilidade.html">Acessibilidade</a></li>
+            <li><a href="../angular/angular.html">Angular</a></li>
+            <li><a href="../boasPraticasCodificacao/boasPraticas.html">Boas Praticas</a></li>
+            <li><a href="../css/css.html">CSS</a></li>
+            <li><a href="../designInterface/designIterface.html">design Interface</a></li>
+            <li><a href="../ferramentasFrontEnd/ferramentasFrontEnd.html">Ferramentas FrontEnd</a></li>
+            <li><a href="../html/html.html">HTML</a></li>
+            <li><a href="../javascript/javascript.html">Javascript</a></li>
+            <li><a href="../otimizacaoDesempenho/otimizacaoDesempenho.html">Otimização de Desempenho</a></li>
+            <li><a href="../react/react.html">React</a></li>
+            <li><a href="../SEO/SEO.html">SEO</a></li>
+            <li><a href="../vue/vue.html">Vue</a></li>
+        </ul>
+    </aside>
+    <main class="main_content">
+        <h1 class="title">Promises</h1>
+
+        <p>Promises são uma maneira de lidar com código assíncrono em JavaScript de forma mais legível e organizada. Uma Promise representa uma operação que ainda não foi concluída, mas que será concluída no futuro, como uma chamada de API, uma consulta a um banco de dados ou uma animação em um elemento da página.</p>
+    
+        <p>Uma Promise pode estar em um de três estados:</p>
+    
+        <p>Pendente (pending): quando a Promise ainda não foi concluída;</p>
+        <p>Resolvida (fulfilled): quando a operação foi bem-sucedida;</p>
+        <p>Rejeitada (rejected): quando ocorre um erro durante a operação.</p>
+        <p>A Promise é criada usando a palavra-chave new Promise(), seguida por uma função que recebe dois argumentos: resolve e reject. resolve é uma função que é chamada quando a operação é concluída com sucesso e retorna o valor resultante, enquanto reject é uma função que é chamada quando ocorre um erro e retorna o motivo do erro. Por exemplo:</p>
+    
+<pre><code>
+    const promessa = new Promise((resolve, reject) => {
+        const resultado = fazerOperacaoAssincrona();
+        if (resultado) {
+            resolve(resultado);
+        } else {
+            reject("Ocorreu um erro!");
+        }
+        });
+</code></pre>
+        
+        <p>Para acessar o resultado da Promise, usamos o método .then() para lidar com a operação bem-sucedida e .catch() para lidar com o erro. Por exemplo:</p>
+    
+<pre><code>
+    promessa
+        .then(resultado => {
+            console.log(resultado);
+        })
+        .catch(erro => {
+            console.log(erro);
+        });
+</code></pre>
+        
+        <p>Neste exemplo, usamos .then() para imprimir o resultado no console se a operação for bem-sucedida e .catch() para imprimir o erro se ocorrer um erro.</p>
+    
+        <p>Além disso, também podemos encadear várias Promises usando o método .then(), criando uma sequência de operações assíncronas que são executadas uma após a outra. Isso é conhecido como "chaining". Por exemplo:</p>
+    
+<pre><code>
+    promessa
+        .then(resultado1 => {
+            return fazerOutraOperacaoAssincrona(resultado1);
+        })
+        .then(resultado2 => {
+            console.log(resultado2);
+        })
+        .catch(erro => {
+            console.log(erro);
+        });
+</code></pre>
+        
+        <p>Neste exemplo, executamos uma segunda operação assíncrona após a primeira ter sido concluída com sucesso, e imprimimos o resultado no console.</p>
+    </main>
+    </div>
+    <footer>
+        <div class="container">
+            <h4>Sobre Nós</h4>
+            <p>Nosso blog é uma fonte de informações valiosas para desenvolvedores iniciantes e experientes, além de estudantes e entusiastas da área. Nós nos dedicamos a oferecer conteúdo atualizado e de qualidade para ajudá-lo a aprimorar suas habilidades e se manter à frente no mundo em constante mudança da programação e desenvolvimento de software.</p>
+
+            <p>Editado por <a href="https://www.linkedin.com/in/tiago-psouza-546706246?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BSqaWqSehTM2MOxjXCnxq1g%3D%3D">Tiago Souza.</a></p>
+        </div>
+        <div class="container2">
+            <h4>Contato</h4>
+            <ul>
+                <li><span>Telefone</span>: (61) 993160984</li>
+                <li><span>Email</span>: developer.tiagotech@gmail.com</li>
+            </ul>
+        </div>
+    </footer>
+    <script src="../script/script.js"></script>
+    <script src="https://kit.fontawesome.com/998c60ef77.js" crossorigin="anonymous"></script>
+</body>
+</html>

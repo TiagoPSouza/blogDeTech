@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seletores CSS</title>
+    <link rel="stylesheet" href="../style/stylePages.css">
+</head>
+<body>
+    <header class="headerPages">
+        <div class="headerBar">
+            <div class="logo">
+                <a href="../../index.html" class="logoLink">
+                    <i>&lt;Tech&gt;</i>
+                </a>
+            </div>
+            <div class="containerDark">
+                <input type="checkbox" class="checkbox" id="chk">
+                <label class="label" for="chk">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                    <div class="ball"></div>
+                </label>
+            </div>
+            <div class="containerMenu">
+                <img class="menuBurguer40px" style="display: block;" src="../icones/menu_FILL0_wght400_GRAD0_opsz40.svg" alt="abrir o menu">
+                
+                <img class="closeMenu40px" src="../icones/close_FILL0_wght500_GRAD0_opsz40.svg" alt="fechar menu">
+            </div>
+        </div>
+        <nav class="navPages">
+            <ul>
+                <li> <a href="css.html">CSS</a></li>
+                <li> <a href="Animações_e_Transicoes.html">Animações e Transições</a></li>
+                <li> <a href="Box_Model.html">Box Model</a></li>
+                <li> <a href="CSS_Arquitetura.html">Arquitetura CSS</a></li>
+                <li> <a href="ferramentas_devCSS.html">Ferramentas devCSS</a></li>
+                <li> <a href="Flexbox.html">Flexbox</a></li>
+                <li> <a href="Grid.html">Grid</a></li>
+                <li> <a href="Pre-processadores_CSS.html">Pre-processadores</a></li>
+                <li> <a href="Responsividade.html">Responsividade</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container_aside-main">
+    <aside class="asidePages">
+        <ul>
+            <li><a href="../frontEnd.html">Front End</a></li>
+            <li><a href="../acessibilidade/acessibilidade.html">Acessibilidade</a></li>
+            <li><a href="../angular/angular.html">Angular</a></li>
+            <li><a href="../boasPraticasCodificacao/boasPraticas.html">Boas Praticas</a></li>
+            <li><a href="../css/css.html">CSS</a></li>
+            <li><a href="../designInterface/designIterface.html">design Interface</a></li>
+            <li><a href="../ferramentasFrontEnd/ferramentasFrontEnd.html">Ferramentas FrontEnd</a></li>
+            <li><a href="../html/html.html">HTML</a></li>
+            <li><a href="../javascript/javascript.html">Javascript</a></li>
+            <li><a href="../otimizacaoDesempenho/otimizacaoDesempenho.html">Otimização de Desempenho</a></li>
+            <li><a href="../react/react.html">React</a></li>
+            <li><a href="../SEO/SEO.html">SEO</a></li>
+            <li><a href="../vue/vue.html">Vue</a></li>
+        </ul>
+    </aside>
+    <main class="main_content">
+        <h1 class="title">Seletores CSS</h1>
+
+        <p>Os seletores CSS são usados para selecionar e estilizar elementos HTML em uma página da web. Eles indicam ao navegador quais elementos devem receber as regras de estilo definidas em um arquivo CSS. Alguns exemplos comuns de seletores CSS incluem:</p>
+    
+        <p>Seletor de tipo: seleciona todos os elementos com um determinado tipo, como &lt;h1&gt;, &lt;p&gt; ou &lt;div&gt;. Por exemplo: h1 {color: red;} irá definir a cor vermelha para todos os elementos &lt;h1&gt; na página.</p>
+    
+        <p>Seletor de classe: seleciona elementos que têm um determinado valor atribuído ao atributo "class". Por exemplo: .destaque {font-weight: bold;} irá definir negrito para todos os elementos que possuem a classe "destaque".</p>
+    
+        <p>Seletor de ID: seleciona um único elemento com um determinado valor atribuído ao atributo "id". Por exemplo: #logo {width: 200px;} irá definir a largura de 200 pixels para o elemento com o ID "logo".</p>
+    
+        <p>Seletor de atributo: seleciona elementos que possuem um determinado valor atribuído a um atributo específico. Por exemplo: input[type="text"] {border: 1px solid black;} irá definir uma borda preta de 1 pixel para todos os elementos &lt;input&gt; do tipo "text".</p>
+    
+        <p>Seletor de descendência: seleciona elementos que são descendentes de outro elemento. Por exemplo: ul li {list-style: none;} irá remover as bolinhas de lista de todos os elementos &lt;li&gt; que estão dentro de um elemento &lt;ul&gt;.</p>
+    
+        <p>Esses são apenas alguns exemplos de seletores CSS. Há muitos outros tipos de seletores disponíveis, e é importante conhecer os diferentes tipos para poder estilizar corretamente uma página da web.</p>
+    </main>
+    </div>
+    <footer>
+        <div class="container">
+                <h4>Sobre Nós</h4>
+                <p>Nosso blog é uma fonte de informações valiosas para desenvolvedores iniciantes e experientes, além de estudantes e entusiastas da área. Nós nos dedicamos a oferecer conteúdo atualizado e de qualidade para ajudá-lo a aprimorar suas habilidades e se manter à frente no mundo em constante mudança da programação e desenvolvimento de software.</p>
+
+                <p>Editado por <a href="https://www.linkedin.com/in/tiago-psouza-546706246?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BSqaWqSehTM2MOxjXCnxq1g%3D%3D">Tiago Souza.</a></p>
+            </div>
+            <div class="container2">
+                <h4>Contato</h4>
+                <ul>
+                <li><span>Telefone</span>: (61) 993160984</li>
+                <li><span>Email</span>: developer.tiagotech@gmail.com</li>
+                </ul>
+    </div>
+        
+</footer>
+<script src="../script/script.js"></script>
+<script src="https://kit.fontawesome.com/998c60ef77.js" crossorigin="anonymous"></script>
+</body>
+</html>

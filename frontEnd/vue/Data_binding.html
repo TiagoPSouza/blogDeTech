@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data binding</title>
+    <link rel="stylesheet" href="../style/stylePages.css">
+</head>
+<body>
+    <header class="headerPages">
+        <div class="headerBar">
+            <div class="logo">
+                <a href="../../index.html" class="logoLink">
+                    <i>&lt;Tech&gt;</i>
+                </a>
+            </div>
+            <div class="containerDark">
+                <input type="checkbox" class="checkbox" id="chk">
+                <label class="label" for="chk">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                    <div class="ball"></div>
+                </label>
+            </div>
+            <div class="containerMenu">
+                <img class="menuBurguer40px" style="display: block;" src="../icones/menu_FILL0_wght400_GRAD0_opsz40.svg" alt="abrir o menu">
+                
+                <img class="closeMenu40px" src="../icones/close_FILL0_wght500_GRAD0_opsz40.svg" alt="fechar menu">
+            </div>
+        </div>
+        <nav class="navPages">
+            <ul>
+                <li> <a href="vue.html">vue</a></li>
+                <li> <a href="Ciclo_componente.html">Ciclo Componente</a></li>
+                <li> <a href="Componentes.html">Componentes</a></li>
+                <li> <a href="Diretivas.html">Diretivas</a></li>
+                <li> <a href="Gerenciamento_estado.html">Gerenciamento de Estado</a></li>
+                <li> <a href="Roteamento.html">Roteamento</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container_aside-main">
+    <aside class="asidePages">
+        <ul>
+            <li><a href="../frontEnd.html">Front End</a></li>
+            <li><a href="../acessibilidade/acessibilidade.html">Acessibilidade</a></li>
+            <li><a href="../angular/angular.html">Angular</a></li>
+            <li><a href="../boasPraticasCodificacao/boasPraticas.html">Boas Praticas</a></li>
+            <li><a href="../css/css.html">CSS</a></li>
+            <li><a href="../designInterface/designIterface.html">design Interface</a></li>
+            <li><a href="../ferramentasFrontEnd/ferramentasFrontEnd.html">Ferramentas FrontEnd</a></li>
+            <li><a href="../html/html.html">HTML</a></li>
+            <li><a href="../javascript/javascript.html">Javascript</a></li>
+            <li><a href="../otimizacaoDesempenho/otimizacaoDesempenho.html">Otimização de Desempenho</a></li>
+            <li><a href="../react/react.html">React</a></li>
+            <li><a href="../SEO/SEO.html">SEO</a></li>
+            <li><a href="../vue/vue.html">Vue</a></li>
+        </ul>
+    </aside>
+    <main class="main_content">
+        <h1 class="title">Data binding</h1>
+
+        <p>Data binding é um recurso presente em muitos frameworks de desenvolvimento de aplicativos que permite que os dados sejam sincronizados automaticamente entre o modelo de dados e a interface do usuário. Com data binding, não é necessário manipular manualmente o DOM (Modelo de Objeto de Documento) para atualizar a interface do usuário quando os dados do modelo mudam.</p>
+    
+        <p>Existem três tipos principais de data binding: unidirecional, bidirecional e unidirecional computado.</p>
+        
+        <p>Unidirecional: a atualização dos dados do modelo é refletida na interface do usuário, mas as alterações feitas na interface do usuário não atualizam automaticamente o modelo.</p>
+        
+        <p>Bidirecional: as atualizações nos dados do modelo são refletidas na interface do usuário e as alterações feitas na interface do usuário também são propagadas de volta para o modelo.</p>
+        
+        <p>Unidirecional computado: é semelhante ao unidirecional, mas permite a criação de propriedades computadas no modelo que atualizam automaticamente a interface do usuário quando os dados subjacentes mudam.</p>
+        
+        <p>Data binding é útil porque reduz a quantidade de código necessário para atualizar a interface do usuário, permitindo que os desenvolvedores se concentrem mais na lógica de negócios do aplicativo em vez de manipular manualmente o DOM. Também ajuda a manter a consistência entre o modelo de dados e a interface do usuário, evitando erros comuns de sincronização de dados.</p>
+        
+        <p>Em Vue, o data binding é uma das características centrais do framework. O Vue permite que os desenvolvedores criem ligações de dados entre o modelo e a interface do usuário usando a sintaxe de diretiva v-bind ou dois pontos.</p>
+        
+        <p>Por exemplo, para vincular uma propriedade em um elemento HTML a uma propriedade no modelo Vue, usamos a diretiva v-bind. Por exemplo, para vincular a propriedade "title" do modelo Vue a um elemento HTML de título, podemos usar a seguinte sintaxe:</p>
+        
+<pre><code>
+    &lt;div v-bind:title="title"&gt;Hover me to see the title!&lt;/div&gt;
+</code> </pre>
+        
+        <p>Ou usando a sintaxe abreviada de dois pontos:</p>
+        
+<pre><code>
+    &lt;div :title="title"&gt;Hover me to see the title!&lt;/div&gt;
+</code> </pre>
+        
+        <p>Também podemos usar o data binding bidirecional, onde as atualizações na interface do usuário são refletidas automaticamente no modelo, e vice-versa. Para isso, usamos a diretiva v-model. Por exemplo, para vincular um campo de entrada de texto a uma propriedade no modelo Vue, podemos usar a seguinte sintaxe:</p>
+        
+<pre><code>
+    &lt;input v-model="message" placeholder="Type something..."&gt;
+</code></pre>
+        
+        <p>Assim, sempre que o usuário digitar algo no campo de entrada de texto, a propriedade "message" no modelo será atualizada automaticamente, e vice-versa.</p>
+        
+        <p>O Vue também suporta propriedades computadas que permitem criar propriedades derivadas que atualizam automaticamente quando os dados subjacentes são alterados. O Vue detecta automaticamente as dependências de uma propriedade computada e atualiza-a somente quando necessário, o que pode ser muito eficiente em termos de desempenho.</p>
+        
+        <p>Em resumo, o data binding é uma das principais características do Vue e permite que os desenvolvedores criem interfaces de usuário dinâmicas e interativas com muito menos código do que seria necessário usando o DOM manipulação tradicional.</p>
+    </main>
+    </div>
+    <footer>
+        <div class="container">
+            <h4>Sobre Nós</h4>
+            <p>Nosso blog é uma fonte de informações valiosas para desenvolvedores iniciantes e experientes, além de estudantes e entusiastas da área. Nós nos dedicamos a oferecer conteúdo atualizado e de qualidade para ajudá-lo a aprimorar suas habilidades e se manter à frente no mundo em constante mudança da programação e desenvolvimento de software.</p>
+
+            <p>Editado por <a href="https://www.linkedin.com/in/tiago-psouza-546706246?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BSqaWqSehTM2MOxjXCnxq1g%3D%3D">Tiago Souza.</a></p>
+        </div>
+        <div class="container2">
+            <h4>Contato</h4>
+            <ul>
+                <li><span>Telefone</span>: (61) 993160984</li>
+                <li><span>Email</span>: developer.tiagotech@gmail.com</li>
+            </ul>
+        </div>
+    </footer>
+    <script src="../script/script.js"></script>
+    <script src="https://kit.fontawesome.com/998c60ef77.js" crossorigin="anonymous"></script>
+</body>
+</html>

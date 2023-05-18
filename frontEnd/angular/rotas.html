@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roats em Angular</title>
+    <link rel="stylesheet" href="../style/stylePages.css">
+</head>
+<body>
+    <header class="headerPages">
+      <div class="headerBar">
+        <div class="logo">
+          <a href="../../index.html" class="logoLink">
+              <i>&lt;Tech&gt;</i>
+          </a>
+      </div>
+        <div class="containerDark">
+          <input type="checkbox" class="checkbox" id="chk">
+          <label class="label" for="chk">
+              <i class="fas fa-moon"></i>
+              <i class="fas fa-sun"></i>
+              <div class="ball"></div>
+          </label>
+      </div>
+        <div class="containerMenu">
+            <img class="menuBurguer40px" style="display: block;" src="../icones/menu_FILL0_wght400_GRAD0_opsz40.svg" alt="abrir o menu">
+            
+            <img class="closeMenu40px" src="../icones/close_FILL0_wght500_GRAD0_opsz40.svg" alt="fechar menu">
+        </div>
+    </div>
+        <nav class="navPages">
+          <ul>
+            <li> <a href="angular.html">Angular</a></li>
+            <li> <a href="componentes.html">Componentes</a></li>
+            <li> <a href="diretivas.html">Diretivas</a></li>
+            <li> <a href="injecao.html">Injeção</a></li>
+            <li> <a href="modulos.html">Modulos</a></li>
+            <li> <a href="observables .html">Observables</a></li>
+            <li> <a href="pipe.html">Pipe</a></li>
+            <li> <a href="servicos.html">Serviços</a></li>
+          </ul>
+      </nav>
+  </header>
+  <div class="container_aside-main">
+  <aside class="asidePages">
+    <ul>
+      <li><a href="../frontEnd.html">Front End</a></li>
+      <li><a href="../acessibilidade/acessibilidade.html">Acessibilidade</a></li>
+      <li><a href="../angular/angular.html">Angular</a></li>
+      <li><a href="../boasPraticasCodificacao/boasPraticas.html">Boas Praticas</a></li>
+      <li><a href="../css/css.html">CSS</a></li>
+      <li><a href="../designInterface/designIterface.html">design Interface</a></li>
+      <li><a href="../ferramentasFrontEnd/ferramentasFrontEnd.html">Ferramentas FrontEnd</a></li>
+      <li><a href="../html/html.html">HTML</a></li>
+      <li><a href="../javascript/javascript.html">Javascript</a></li>
+      <li><a href="../otimizacaoDesempenho/otimizacaoDesempenho.html">Otimização de Desempenho</a></li>
+      <li><a href="../react/react.html">React</a></li>
+      <li><a href="../SEO/SEO.html">SEO</a></li>
+      <li><a href="../vue/vue.html">Vue</a></li>
+  </ul>
+  </aside>
+  <main class="main_content">
+    <h1 class="title">Rotas em Angular</h1>
+
+    <p>Rotas em Angular são usadas para criar um aplicativo web de página única (SPA), permitindo que os usuários naveguem entre diferentes páginas de conteúdo sem a necessidade de carregar uma página totalmente nova a cada vez que uma rota é acessada.</p> 
+
+    <p>Para definir rotas em Angular, você precisará usar o módulo "RouterModule" e importá-lo em seu componente raiz. Em seguida, você pode definir as rotas usando o método "forRoot" do RouterModule.</p> 
+
+    <p>Por exemplo, para definir uma rota para uma página "home", você poderia fazer o seguinte:</p> 
+
+    <p>Importe o RouterModule no seu componente raiz:</p> 
+ 
+<pre><code>
+  import { NgModule } from '@angular/core';
+  import { RouterModule, Routes } from '@angular/router';
+  
+  @NgModule({
+    imports: [RouterModule.forRoot(routes)],
+    exports: [RouterModule]
+  })
+  export class AppRoutingModule { }
+  Defina a rota para a página inicial:
+  typescript
+  Copy code
+  const routes: Routes = [
+    { path: '', component: HomeComponent },
+  ];
+</code></pre>
+
+    <p>Isso definirá uma rota para a página inicial, que irá carregar o componente HomeComponent sempre que a rota for acessada.</p> 
+
+    <p>Você também pode definir rotas adicionais, como por exemplo uma rota para a página "sobre" do seu aplicativo:</p> 
+
+<pre><code>
+  const routes: Routes = [
+    { path: '', component: HomeComponent },
+    { path: 'about', component: AboutComponent },
+  ];
+</code></pre>
+
+    <p>Isso criará uma nova rota para a página "about", que irá carregar o componente AboutComponent sempre que a rota for acessada.</p> 
+
+    <p>Para navegar entre as rotas, você pode usar o componente "routerLink" e atribuí-lo a um elemento de navegação em seu template HTML:</p> 
+
+<pre><code>
+  &lt;ul&gt;
+      &lt;li&gt;&lt;a routerLink="/"&gt;Home&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a routerLink="/about"&gt;About&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;          
+</code></pre>
+
+    <p>Isso criará dois links de navegação, um para a página inicial e outro para a página "about". Quando o usuário clicar em um desses links, o Angular irá navegar para a rota correspondente e carregar o componente apropriado.</p> 
+  </main>
+  </div>
+  <footer>
+    <div class="container">
+            <h4>Sobre Nós</h4>
+            <p>Nosso blog é uma fonte de informações valiosas para desenvolvedores iniciantes e experientes, além de estudantes e entusiastas da área. Nós nos dedicamos a oferecer conteúdo atualizado e de qualidade para ajudá-lo a aprimorar suas habilidades e se manter à frente no mundo em constante mudança da programação e desenvolvimento de software.</p>
+
+            <p>Editado por <a href="https://www.linkedin.com/in/tiago-psouza-546706246?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BSqaWqSehTM2MOxjXCnxq1g%3D%3D">Tiago Souza.</a></p>
+        </div>
+        <div class="container2">
+            <h4>Contato</h4>
+            <ul>
+            <li><span>Telefone</span>: (61) 993160984</li>
+            <li><span>Email</span>: developer.tiagotech@gmail.com</li>
+            </ul>
+</div>
+    
+</footer>
+<script src="../script/script.js"></script>
+<script src="https://kit.fontawesome.com/998c60ef77.js" crossorigin="anonymous"></script>
+</body>
+</html>

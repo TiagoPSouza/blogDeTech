@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>State</title>
+    <link rel="stylesheet" href="../style/stylePages.css">
+</head>
+<body>
+    <header class="headerPages">
+      <div class="headerBar">
+        <div class="logo">
+          <a href="../../index.html" class="logoLink">
+              <i>&lt;Tech&gt;</i>
+          </a>
+      </div>
+        <div class="containerDark">
+          <input type="checkbox" class="checkbox" id="chk">
+          <label class="label" for="chk">
+              <i class="fas fa-moon"></i>
+              <i class="fas fa-sun"></i>
+              <div class="ball"></div>
+          </label>
+      </div>
+        <div class="containerMenu">
+            <img class="menuBurguer40px" style="display: block;" src="../icones/menu_FILL0_wght400_GRAD0_opsz40.svg" alt="abrir o menu">
+            
+            <img class="closeMenu40px" src="../icones/close_FILL0_wght500_GRAD0_opsz40.svg" alt="fechar menu">
+        </div>
+    </div>
+        <nav class="navPages">
+        <ul>
+            <li> <a href="react.html">React</a></li>
+            <li> <a href="Ciclo_de_vida_comp.html">Ciclo de vida do componente</a></li>
+            <li> <a href="Componentes_React.html">Componentes React</a></li>
+            <li> <a href="Context_API.html">Context API</a></li>
+            <li> <a href="Eventos.html">Eventos</a></li>
+            <li> <a href="Hooks.html">Hooks</a></li>
+            <li> <a href="HTML-like.html">HTML-like</a></li>
+            <li> <a href="JSX.html">JSX</a></li>
+            <li> <a href="metodo_render.html">Método render</a></li>
+            <li> <a href="Props.html">Props</a></li>
+            <li> <a href="React_Router.html">React Router</a></li>
+            <li> <a href="Renderizacao.html">Renderização</a></li>
+            <li> <a href="MobX/MobX.html">MobX</a></li>
+            <li> <a href="redux/redux.html">Redux</a></li>
+        </ul>
+    </nav>
+</header>
+<div class="container_aside-main">
+<aside class="asidePages">
+  <ul>
+    <li><a href="../frontEnd.html">Front End</a></li>
+    <li><a href="../acessibilidade/acessibilidade.html">Acessibilidade</a></li>
+    <li><a href="../angular/angular.html">Angular</a></li>
+    <li><a href="../boasPraticasCodificacao/boasPraticas.html">Boas Praticas</a></li>
+    <li><a href="../css/css.html">CSS</a></li>
+    <li><a href="../designInterface/designIterface.html">design Interface</a></li>
+    <li><a href="../ferramentasFrontEnd/ferramentasFrontEnd.html">Ferramentas FrontEnd</a></li>
+    <li><a href="../html/html.html">HTML</a></li>
+    <li><a href="../javascript/javascript.html">Javascript</a></li>
+    <li><a href="../otimizacaoDesempenho/otimizacaoDesempenho.html">Otimização de Desempenho</a></li>
+    <li><a href="../react/react.html">React</a></li>
+    <li><a href="../SEO/SEO.html">SEO</a></li>
+    <li><a href="../vue/vue.html">Vue</a></li>
+</ul>
+</aside>
+<main class="main_content">
+  <h1 class="title">State</h1>
+
+  <p>O state (estado) é uma das principais características do React e é usado para gerenciar o estado interno de um componente. O state é um objeto JavaScript que contém dados que podem ser atualizados pelo próprio componente e que podem afetar a renderização do componente.</p>
+
+  <p>O state é definido dentro do construtor do componente usando a função setState(). A função setState() é usada para atualizar o state e notificar o React que o componente deve ser renderizado novamente com base nos novos dados do state.</p>
+  
+  <p>Por exemplo, um componente que exibe um contador pode ser definido da seguinte forma:</p>
+  
+<pre><code>
+  import React, { Component } from 'react';
+
+  class MeuComponente extends Component {
+    constructor(props) {
+      super(props);
+      this.state = {
+        contador: 0
+      };
+    }
+  
+    incrementarContador() {
+      this.setState({ contador: this.state.contador + 1 });
+    }
+  
+    render() {
+      return (
+        &lt;div&gt;
+          &lt;p&gt;Contador: {this.state.contador}&lt;/p&gt;
+          &lt;button onClick={() =&gt; this.incrementarContador()}&gt;Incrementar&lt;/button&gt;
+        &lt;/div&gt;
+      );
+    }
+  }
+</code></pre>
+  
+  <p>Nesse exemplo, o componente tem um state chamado contador com o valor inicial de 0.</p>
+
+  <p>O método incrementarContador() é usado para atualizar o state do contador e chamar a função setState(). O método render() usa o valor atual do contador para exibi-lo na tela e define um botão que chama o método incrementarContador() quando clicado.</p>
+  
+  <p>O state deve ser usado com cuidado em React, pois as atualizações do state podem ser assíncronas e podem causar efeitos colaterais indesejados. Além disso, é importante não modificar o state diretamente, mas sim usar a função setState() para garantir que as atualizações do state sejam feitas corretamente.</p>
+  
+  <p>Em resumo, o state é usado para gerenciar o estado interno de um componente em React.</p> 
+  
+  <p>O state é um objeto JavaScript que contém dados que podem ser atualizados pelo próprio componente e que podem afetar a renderização do componente. A função setState() é usada para atualizar o state e notificar o React que o componente deve ser renderizado novamente com base nos novos dados do state.</p>
+</main>
+</div>
+<footer>
+  <div class="container">
+      <h4>Sobre Nós</h4>
+      <p>Nosso blog é uma fonte de informações valiosas para desenvolvedores iniciantes e experientes, além de estudantes e entusiastas da área. Nós nos dedicamos a oferecer conteúdo atualizado e de qualidade para ajudá-lo a aprimorar suas habilidades e se manter à frente no mundo em constante mudança da programação e desenvolvimento de software.</p>
+
+      <p>Editado por <a href="https://www.linkedin.com/in/tiago-psouza-546706246?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BSqaWqSehTM2MOxjXCnxq1g%3D%3D">Tiago Souza.</a></p>
+  </div>
+  <div class="container2">
+      <h4>Contato</h4>
+      <ul>
+          <li><span>Telefone</span>: (61) 993160984</li>
+          <li><span>Email</span>: developer.tiagotech@gmail.com</li>
+      </ul>
+  </div>
+</footer>
+<script src="../script/script.js"></script>
+<script src="https://kit.fontawesome.com/998c60ef77.js" crossorigin="anonymous"></script>
+</body>
+</html>

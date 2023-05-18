@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animações e Transições</title>
+    <link rel="stylesheet" href="../style/stylePages.css">
+</head>
+<body>
+    <header class="headerPages">
+        <div class="headerBar">
+            <div class="logo">
+                <a href="../../index.html" class="logoLink">
+                    <i>&lt;Tech&gt;</i>
+                </a>
+            </div>
+            <div class="containerDark">
+                <input type="checkbox" class="checkbox" id="chk">
+                <label class="label" for="chk">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                    <div class="ball"></div>
+                </label>
+            </div>
+            <div class="containerMenu">
+                <img class="menuBurguer40px" style="display: block;" src="../icones/menu_FILL0_wght400_GRAD0_opsz40.svg" alt="abrir o menu">
+                
+                <img class="closeMenu40px" src="../icones/close_FILL0_wght500_GRAD0_opsz40.svg" alt="fechar menu">
+            </div>
+        </div>
+        <nav class="navPages">
+            <ul>
+                <li> <a href="css.html">CSS</a></li>
+                <li> <a href="Box_Model.html">Box Model</a></li>
+                <li> <a href="CSS_Arquitetura.html">Arquitetura CSS</a></li>
+                <li> <a href="ferramentas_devCSS.html">Ferramentas devCSS</a></li>
+                <li> <a href="Flexbox.html">Flexbox</a></li>
+                <li> <a href="Grid.html">Grid</a></li>
+                <li> <a href="Pre-processadores_CSS.html">Pre-processadores</a></li>
+                <li> <a href="Responsividade.html">Responsividade</a></li>
+                <li> <a href="Seletores_CSS.html">Seletores CSS</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container_aside-main">
+    <aside class="asidePages">
+        <ul>
+            <li><a href="../frontEnd.html">Front End</a></li>
+            <li><a href="../acessibilidade/acessibilidade.html">Acessibilidade</a></li>
+            <li><a href="../angular/angular.html">Angular</a></li>
+            <li><a href="../boasPraticasCodificacao/boasPraticas.html">Boas Praticas</a></li>
+            <li><a href="../css/css.html">CSS</a></li>
+            <li><a href="../designInterface/designIterface.html">design Interface</a></li>
+            <li><a href="../ferramentasFrontEnd/ferramentasFrontEnd.html">Ferramentas FrontEnd</a></li>
+            <li><a href="../html/html.html">HTML</a></li>
+            <li><a href="../javascript/javascript.html">Javascript</a></li>
+            <li><a href="../otimizacaoDesempenho/otimizacaoDesempenho.html">Otimização de Desempenho</a></li>
+            <li><a href="../react/react.html">React</a></li>
+            <li><a href="../SEO/SEO.html">SEO</a></li>
+            <li><a href="../vue/vue.html">Vue</a></li>
+        </ul>
+    </aside>
+    <main class="main_content">
+        <h1 class="title">Animações e Transições</h1>
+
+        <p>As animações e transições são recursos do CSS que permitem adicionar movimento e interatividade a elementos HTML em uma página da web. As animações são usadas para criar mudanças visuais complexas, enquanto as transições são usadas para criar efeitos de transição mais simples entre estados.</p>
+    
+        <p>As transições permitem que um elemento mude de um estado para outro com uma animação suave, em resposta a um evento do usuário, como passar o mouse sobre o elemento ou clicar nele. As transições são definidas usando a propriedade CSS transition, que especifica a propriedade a ser animada, a duração da animação e o tipo de transição. Por exemplo, para fazer a cor de fundo de um botão mudar suavemente quando o mouse passa sobre ele, você pode usar o seguinte código CSS:</p>
+    
+<pre><code>
+    button {
+        background-color: blue;
+        transition: background-color 0.5s ease;
+        }
+    button:hover {
+        background-color: red;
+        }
+</code></pre>
+        
+        <p>Este código especifica que a transição será aplicada à propriedade de cor de fundo do botão, que a duração da animação será de 0,5 segundos e que o tipo de transição será "ease" (suave). Quando o mouse passa sobre o botão, a cor de fundo muda suavemente de azul para vermelho em meio segundo.</p>
+    
+        <p>As animações permitem criar efeitos mais complexos e sofisticados em elementos HTML. As animações são definidas usando a propriedade CSS animation, que especifica a chave da animação (que contém as propriedades CSS que serão animadas), a duração da animação, o número de iterações e outras opções. Por exemplo, para criar uma animação que faça uma imagem girar continuamente, você pode usar o seguinte código CSS:</p>
+    
+<pre><code>
+    img {
+        animation: spin 2s linear infinite;
+        }
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+        }
+</code></pre>
+        
+        <p>Este código define a animação "spin" que será aplicada a uma imagem. A animação terá uma duração de 2 segundos, será linear e girará infinitamente. A chave da animação "spin" é definida usando a regra @keyframes, que especifica como a imagem deve se mover durante a animação. Neste exemplo, a imagem gira continuamente, passando de 0 graus a 360 graus de rotação.</p>
+    
+        <p>Em resumo, as animações e transições são recursos do CSS que permitem adicionar movimento e interatividade a elementos HTML em uma página da web. As transições são usadas para criar efeitos de transição mais simples entre estados, enquanto as animações são usadas para criar mudanças visuais mais complexas e sofisticadas.</p>
+    </main>
+    </div>
+    <footer>
+        <div class="container">
+                <h4>Sobre Nós</h4>
+                <p>Nosso blog é uma fonte de informações valiosas para desenvolvedores iniciantes e experientes, além de estudantes e entusiastas da área. Nós nos dedicamos a oferecer conteúdo atualizado e de qualidade para ajudá-lo a aprimorar suas habilidades e se manter à frente no mundo em constante mudança da programação e desenvolvimento de software.</p>
+
+                <p>Editado por <a href="https://www.linkedin.com/in/tiago-psouza-546706246?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BSqaWqSehTM2MOxjXCnxq1g%3D%3D">Tiago Souza.</a></p>
+            </div>
+            <div class="container2">
+                <h4>Contato</h4>
+                <ul>
+                <li><span>Telefone</span>: (61) 993160984</li>
+                <li><span>Email</span>: developer.tiagotech@gmail.com</li>
+                </ul>
+    </div>
+        
+</footer>
+<script src="../script/script.js"></script>
+<script src="https://kit.fontawesome.com/998c60ef77.js" crossorigin="anonymous"></script>
+</body>
+</html>

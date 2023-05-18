@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciclo de vida do componente</title>
+    <link rel="stylesheet" href="../style/stylePages.css">
+</head>
+<body>
+    <header class="headerPages">
+        <div class="headerBar">
+            <div class="logo">
+                <a href="../../index.html" class="logoLink">
+                    <i>&lt;Tech&gt;</i>
+                </a>
+            </div>
+            <div class="containerDark">
+                <input type="checkbox" class="checkbox" id="chk">
+                <label class="label" for="chk">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                    <div class="ball"></div>
+                </label>
+            </div>
+            <div class="containerMenu">
+                <img class="menuBurguer40px" style="display: block;" src="../icones/menu_FILL0_wght400_GRAD0_opsz40.svg" alt="abrir o menu">
+                
+                <img class="closeMenu40px" src="../icones/close_FILL0_wght500_GRAD0_opsz40.svg" alt="fechar menu">
+            </div>
+        </div>
+        <nav class="navPages">
+            <ul>
+                <li> <a href="react.html">React</a></li>
+                <li> <a href="Componentes_React.html">Componentes React</a></li>
+                <li> <a href="Context_API.html">Context API</a></li>
+                <li> <a href="Eventos.html">Eventos</a></li>
+                <li> <a href="Hooks.html">Hooks</a></li>
+                <li> <a href="HTML-like.html">HTML-like</a></li>
+                <li> <a href="JSX.html">JSX</a></li>
+                <li> <a href="metodo_render.html">Método render</a></li>
+                <li> <a href="Props.html">Props</a></li>
+                <li> <a href="React_Router.html">React Router</a></li>
+                <li> <a href="Renderizacao.html">Renderizacao</a></li>
+                <li> <a href="State.html">State</a></li>
+                <li> <a href="MobX/MobX.html">MobX</a></li>
+                <li> <a href="redux/redux.html">Redux</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container_aside-main">
+    <aside class="asidePages">
+        <ul>
+            <li><a href="../frontEnd.html">Front End</a></li>
+            <li><a href="../acessibilidade/acessibilidade.html">Acessibilidade</a></li>
+            <li><a href="../angular/angular.html">Angular</a></li>
+            <li><a href="../boasPraticasCodificacao/boasPraticas.html">Boas Praticas</a></li>
+            <li><a href="../css/css.html">CSS</a></li>
+            <li><a href="../designInterface/designIterface.html">design Interface</a></li>
+            <li><a href="../ferramentasFrontEnd/ferramentasFrontEnd.html">Ferramentas FrontEnd</a></li>
+            <li><a href="../html/html.html">HTML</a></li>
+            <li><a href="../javascript/javascript.html">Javascript</a></li>
+            <li><a href="../otimizacaoDesempenho/otimizacaoDesempenho.html">Otimização de Desempenho</a></li>
+            <li><a href="../react/react.html">React</a></li>
+            <li><a href="../SEO/SEO.html">SEO</a></li>
+            <li><a href="../vue/vue.html">Vue</a></li>
+        </ul>
+    </aside>
+    <main class="main_content">
+        <h1 class="title">Ciclo de vida do componente</h1>
+
+        <p>O ciclo de vida do componente em React refere-se às diferentes etapas pelas quais um componente passa desde o momento em que é criado até o momento em que é removido da interface do usuário. Cada etapa é representada por um método que pode ser sobrescrito pelo desenvolvedor para executar tarefas específicas.</p>
+    
+        <p>Existem três fases principais no ciclo de vida do componente em React:</p>
+        
+        <p>Montagem (Mounting): é a fase em que o componente é criado e inserido na árvore de elementos do DOM.</p>
+        
+        <p>Atualização (Updating): é a fase em que o componente é atualizado com novas propriedades ou estado.</p>
+        
+        <p>Desmontagem (Unmounting): é a fase em que o componente é removido da árvore de elementos do DOM.</p>
+        
+        <p>Na fase de montagem, os seguintes métodos são executados:</p>
+        
+        <p>constructor(): é o primeiro método a ser chamado e é usado para inicializar o estado do componente e vincular métodos de evento.</p>
+        
+        <p>static getDerivedStateFromProps(props, state): é chamado quando o componente é criado e quando as propriedades são atualizadas. Este método deve retornar um objeto que atualizará o estado do componente ou null se o estado não precisar ser atualizado.</p>
+        
+        <p>render(): é o método obrigatório que retorna a representação visual do componente.</p>
+        
+        <p>componentDidMount(): é chamado depois que o componente é renderizado pela primeira vez. Este método é usado para executar tarefas que requerem acesso ao DOM ou a outros recursos.</p>
+        
+        <p>Na fase de atualização, os seguintes métodos são executados:</p>
+        
+        <p>static getDerivedStateFromProps(props, state): é chamado quando as propriedades são atualizadas. Este método deve retornar um objeto que atualizará o estado do componente ou null se o estado não precisar ser atualizado.</p>
+        
+        <p>shouldComponentUpdate(nextProps, nextState): é chamado antes de renderizar o componente. Este método deve retornar um valor booleano que indica se o componente deve ser atualizado.</p>
+        
+        <p>render(): é o método obrigatório que retorna a representação visual atualizada do componente.</p>
+        
+        <p>getSnapshotBeforeUpdate(prevProps, prevState): é chamado antes que o componente seja atualizado e é usado para capturar informações do DOM, como a posição do scroll, antes que a atualização ocorra.</p>
+        
+        <p>componentDidUpdate(prevProps, prevState, snapshot): é chamado depois que o componente é atualizado e é usado para executar tarefas adicionais, como atualizar o DOM com base nas novas propriedades ou estado.</p>
+        
+        <p>Na fase de desmontagem, o seguinte método é executado:</p>
+        
+        <p>componentWillUnmount(): é chamado quando o componente é removido da árvore de elementos do DOM. Este método é usado para limpar recursos ou cancelar solicitações de rede que podem ter sido iniciadas pelo componente.</p>
+        
+        <p>Além desses métodos principais, existem outros métodos opcionais que podem ser usados para lidar com erros, processar eventos do teclado ou do mouse e lidar com atualizações de contexto.</p>
+        
+        <p>É importante lembrar que nem todos os métodos do ciclo de vida são executados em todas as fases do ciclo. Além disso, o React também oferece hooks de ciclo de vida que podem ser usados em componentes de função para executar tarefas específicas durante o ciclo de vida do componente.</p>
+    </main>
+    </div>
+    <footer>
+        <div class="container">
+            <h4>Sobre Nós</h4>
+            <p>Nosso blog é uma fonte de informações valiosas para desenvolvedores iniciantes e experientes, além de estudantes e entusiastas da área. Nós nos dedicamos a oferecer conteúdo atualizado e de qualidade para ajudá-lo a aprimorar suas habilidades e se manter à frente no mundo em constante mudança da programação e desenvolvimento de software.</p>
+
+            <p>Editado por <a href="https://www.linkedin.com/in/tiago-psouza-546706246?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BSqaWqSehTM2MOxjXCnxq1g%3D%3D">Tiago Souza.</a></p>
+        </div>
+        <div class="container2">
+            <h4>Contato</h4>
+            <ul>
+                <li><span>Telefone</span>: (61) 993160984</li>
+                <li><span>Email</span>: developer.tiagotech@gmail.com</li>
+            </ul>
+        </div>
+    </footer>
+    <script src="../script/script.js"></script>
+    <script src="https://kit.fontawesome.com/998c60ef77.js" crossorigin="anonymous"></script>
+</body>
+</html>

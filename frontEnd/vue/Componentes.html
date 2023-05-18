@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Componentes</title>
+    <link rel="stylesheet" href="../style/stylePages.css">
+</head>
+<body>
+<header class="headerPages">
+  <div class="headerBar">
+    <div class="logo">
+      <a href="../../index.html" class="logoLink">
+          <i>&lt;Tech&gt;</i>
+      </a>
+  </div>
+    <div class="containerDark">
+      <input type="checkbox" class="checkbox" id="chk">
+      <label class="label" for="chk">
+          <i class="fas fa-moon"></i>
+          <i class="fas fa-sun"></i>
+          <div class="ball"></div>
+      </label>
+  </div>
+    <div class="containerMenu">
+        <img class="menuBurguer40px" style="display: block;" src="../icones/menu_FILL0_wght400_GRAD0_opsz40.svg" alt="abrir o menu">
+        
+        <img class="closeMenu40px" src="../icones/close_FILL0_wght500_GRAD0_opsz40.svg" alt="fechar menu">
+    </div>
+</div>
+    <nav class="navPages">
+        <ul>
+            <li> <a href="vue.html">vue</a></li>
+            <li> <a href="Ciclo_componente.html">Ciclo Componente</a></li>
+            <li> <a href="Data_binding.html">Data Binding</a></li>
+            <li> <a href="Diretivas.html">Diretivas</a></li>
+            <li> <a href="Gerenciamento_estado.html">Gerenciamento de Estado</a></li>
+            <li> <a href="Roteamento.html">Roteamento</a></li>
+        </ul>
+    </nav>
+</header>
+<div class="container_aside-main">
+<aside class="asidePages">
+  <ul>
+    <li><a href="../frontEnd.html">Front End</a></li>
+    <li><a href="../acessibilidade/acessibilidade.html">Acessibilidade</a></li>
+    <li><a href="../angular/angular.html">Angular</a></li>
+    <li><a href="../boasPraticasCodificacao/boasPraticas.html">Boas Praticas</a></li>
+    <li><a href="../css/css.html">CSS</a></li>
+    <li><a href="../designInterface/designIterface.html">design Interface</a></li>
+    <li><a href="../ferramentasFrontEnd/ferramentasFrontEnd.html">Ferramentas FrontEnd</a></li>
+    <li><a href="../html/html.html">HTML</a></li>
+    <li><a href="../javascript/javascript.html">Javascript</a></li>
+    <li><a href="../otimizacaoDesempenho/otimizacaoDesempenho.html">Otimização de Desempenho</a></li>
+    <li><a href="../react/react.html">React</a></li>
+    <li><a href="../SEO/SEO.html">SEO</a></li>
+    <li><a href="../vue/vue.html">Vue</a></li>
+</ul>
+</aside>
+<main class="main_content">
+  <h1 class="title">Componentes</h1>
+
+  <p>Os componentes Vue são uma das principais funcionalidades do framework Vue.js. Eles permitem que os desenvolvedores dividam suas interfaces de usuário em partes reutilizáveis e independentes, facilitando a criação de interfaces de usuário escaláveis e fáceis de manter. Um componente Vue é basicamente um objeto Vue que encapsula uma seção de interface do usuário, incluindo seu HTML, CSS e JavaScript.</p>
+
+  <p>Aqui está um exemplo básico de como criar um componente Vue:</p>
+  
+<pre><code>
+  &lt;template&gt;
+      &lt;div&gt;
+        &lt;h1&gt;{{ title }}&lt;/h1&gt;
+        &lt;p&gt;{{ message }}&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/template&gt;
+    
+    &lt;script&gt;
+    export default {
+      name: 'MyComponent',
+      props: {
+        title: String,
+        message: String
+      }
+    }
+    &lt;/script&gt;
+    
+    &lt;style&gt;
+    h1 {
+      font-size: 24px;
+    }
+    p {
+      font-size: 16px;
+    }
+    &lt;/style&gt;
+</code></pre>
+  
+  <p>Neste exemplo, definimos um componente Vue chamado "MyComponent". O componente inclui um template, um script e um estilo. O template contém o HTML que será renderizado quando o componente for usado. O script inclui o código JavaScript que define o componente, incluindo suas propriedades e métodos. O estilo inclui as regras CSS para estilizar o componente.</p>
+  
+  <p>Além disso, o componente Vue possui propriedades e eventos personalizados que permitem passar dados para o componente e emitir eventos para notificar outros componentes sobre mudanças. As propriedades são definidas no objeto props do componente e os eventos personalizados são definidos usando o método $emit do componente.</p>
+  
+  <p>Para usar o componente Vue, você pode simplesmente importá-lo em outro componente ou em seu aplicativo principal, e usá-lo como um elemento HTML personalizado, como este:</p>
+  
+<pre><code>
+  &lt;template&gt;
+      &lt;div&gt;
+        &lt;my-component title="Welcome" message="Hello, World!" /&gt;
+      &lt;/div&gt;
+    &lt;/template&gt;
+    
+    &lt;script&gt;
+    import MyComponent from '@/components/MyComponent.vue'
+    
+    export default {
+      components: {
+        MyComponent
+      }
+    }
+    &lt;/script&gt;
+</code></pre>
+  
+  <p>Neste exemplo, importamos o componente MyComponent e o registramos como um componente personalizado usando o objeto components. Em seguida, usamos o componente como um elemento HTML personalizado, passando as propriedades title e message para ele. O resultado é que o componente será renderizado com o título "Welcome" e a mensagem "Hello, World!".</p>
+</main>
+</div>
+<footer>
+  <div class="container">
+      <h4>Sobre Nós</h4>
+      <p>Nosso blog é uma fonte de informações valiosas para desenvolvedores iniciantes e experientes, além de estudantes e entusiastas da área. Nós nos dedicamos a oferecer conteúdo atualizado e de qualidade para ajudá-lo a aprimorar suas habilidades e se manter à frente no mundo em constante mudança da programação e desenvolvimento de software.</p>
+
+      <p>Editado por <a href="https://www.linkedin.com/in/tiago-psouza-546706246?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BSqaWqSehTM2MOxjXCnxq1g%3D%3D">Tiago Souza.</a></p>
+  </div>
+  <div class="container2">
+      <h4>Contato</h4>
+      <ul>
+          <li><span>Telefone</span>: (61) 993160984</li>
+          <li><span>Email</span>: developer.tiagotech@gmail.com</li>
+      </ul>
+  </div>
+</footer>
+<script src="../script/script.js"></script>
+<script src="https://kit.fontawesome.com/998c60ef77.js" crossorigin="anonymous"></script>
+</body>
+</html>

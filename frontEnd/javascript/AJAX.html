@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX</title>
+    <link rel="stylesheet" href="../style/stylePages.css">
+</head>
+<body>
+    <header class="headerPages">
+        <div class="headerBar">
+            <div class="logo">
+                <a href="../../index.html" class="logoLink">
+                    <i>&lt;Tech&gt;</i>
+                </a>
+            </div>
+            <div class="containerDark">
+                <input type="checkbox" class="checkbox" id="chk">
+                <label class="label" for="chk">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                    <div class="ball"></div>
+                </label>
+            </div>
+            <div class="containerMenu">
+                <img class="menuBurguer40px" style="display: block;" src="../icones/menu_FILL0_wght400_GRAD0_opsz40.svg" alt="abrir o menu">
+                
+                <img class="closeMenu40px" src="../icones/close_FILL0_wght500_GRAD0_opsz40.svg" alt="fechar menu">
+            </div>
+        </div>
+        <nav class="navPages">
+            <ul>
+                <li> <a href="javascript.html">Javascript</a></li>
+                <li> <a href="Arrow_Functions.html">Arrow Functions</a></li>
+                <li> <a href="Async_Await.html">Async e Await</a></li>
+                <li> <a href="Classes.html">Classes</a></li>
+                <li> <a href="ferramentas_JS.html">Ferramentas JS</a></li>
+                <li> <a href="Frameworks_JS.html">Frameworks</a></li>
+                <li> <a href="Fundamentos_JavaScript.html">Fundamentos JS</a></li>
+                <li> <a href="Manipulação_do_DOM.html">Manipulação do DOM</a></li>
+                <li> <a href="POO.html">POO</a></li>
+                <li> <a href="Promises.html">Promises</a></li>
+                <li> <a href="segurança_em_JavaScript.html">Segurança em JS</a></li>
+                <li> <a href="Template_Literals.html">Template Literals</a></li>
+                <li> <a href="Teste_de_Unidade.html">Teste de Unidade</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container_aside-main">
+    <aside class="asidePages">
+        <ul>
+            <li><a href="../frontEnd.html">Front End</a></li>
+            <li><a href="../acessibilidade/acessibilidade.html">Acessibilidade</a></li>
+            <li><a href="../angular/angular.html">Angular</a></li>
+            <li><a href="../boasPraticasCodificacao/boasPraticas.html">Boas Praticas</a></li>
+            <li><a href="../css/css.html">CSS</a></li>
+            <li><a href="../designInterface/designIterface.html">design Interface</a></li>
+            <li><a href="../ferramentasFrontEnd/ferramentasFrontEnd.html">Ferramentas FrontEnd</a></li>
+            <li><a href="../html/html.html">HTML</a></li>
+            <li><a href="../javascript/javascript.html">Javascript</a></li>
+            <li><a href="../otimizacaoDesempenho/otimizacaoDesempenho.html">Otimização de Desempenho</a></li>
+            <li><a href="../react/react.html">React</a></li>
+            <li><a href="../SEO/SEO.html">SEO</a></li>
+            <li><a href="../vue/vue.html">Vue</a></li>
+        </ul>
+    </aside>
+    <main class="main_content">
+        <h1 class="title">AJAX</h1>
+
+        <p>AJAX (Asynchronous JavaScript and XML) é uma técnica que permite que o JavaScript faça solicitações a um servidor web sem precisar recarregar a página inteira. Em vez disso, ele pode atualizar apenas parte da página com os dados retornados pela solicitação. Isso torna a experiência do usuário mais rápida e suave, pois não há necessidade de aguardar uma nova página ser carregada.</p>
+    
+        <p>A técnica AJAX envolve a criação de uma solicitação HTTP assíncrona usando o objeto XMLHttpRequest do JavaScript. Esse objeto permite que os desenvolvedores enviem solicitações HTTP para o servidor e processem as respostas recebidas do servidor.</p>
+    
+        <p>Para usar o AJAX em seu projeto, você precisará seguir estes passos:</p>
+    
+        <p>Crie uma instância do objeto XMLHttpRequest usando o método new XMLHttpRequest().</p>
+    
+        <p>Use o método open() para definir os detalhes da solicitação, como o método HTTP usado (por exemplo, GET ou POST), a URL da solicitação e se a solicitação é assíncrona ou síncrona.</p>
+    
+        <p>Defina um listener para o evento onreadystatechange do objeto XMLHttpRequest para processar a resposta do servidor.</p>
+    
+        <p>Use o método send() para enviar a solicitação ao servidor.</p>
+    
+        <p>Aqui está um exemplo simples de AJAX que usa o método GET para obter dados de uma API e atualiza o conteúdo de um elemento na página com os dados retornados:</p>
+    
+<pre><code>
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("meu-elemento").innerHTML = this.responseText;
+        }
+    };
+    xhttp.open("GET", "url-da-api", true);
+    xhttp.send();
+</code></pre>
+        
+    
+        <p>Este é apenas um exemplo básico de como usar o AJAX com o objeto XMLHttpRequest. Existem muitas bibliotecas e frameworks, como o jQuery e o Axios, que fornecem uma API mais fácil de usar para realizar solicitações AJAX.</p>
+    </main>
+    </div>
+    <footer>
+        <div class="container">
+                <h4>Sobre Nós</h4>
+                <p>Nosso blog é uma fonte de informações valiosas para desenvolvedores iniciantes e experientes, além de estudantes e entusiastas da área. Nós nos dedicamos a oferecer conteúdo atualizado e de qualidade para ajudá-lo a aprimorar suas habilidades e se manter à frente no mundo em constante mudança da programação e desenvolvimento de software.</p>
+
+                <p>Editado por <a href="https://www.linkedin.com/in/tiago-psouza-546706246?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BSqaWqSehTM2MOxjXCnxq1g%3D%3D">Tiago Souza.</a></p>
+            </div>
+            <div class="container2">
+                <h4>Contato</h4>
+                <ul>
+                <li><span>Telefone</span>: (61) 993160984</li>
+                <li><span>Email</span>: developer.tiagotech@gmail.com</li>
+                </ul>
+    </div>
+        
+</footer>
+<script src="../script/script.js"></script>
+<script src="https://kit.fontawesome.com/998c60ef77.js" crossorigin="anonymous"></script>
+</body>
+</html>
