@@ -13,6 +13,7 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 body {
+
     background: var(--color1);
     color: var(--color5);
 }
@@ -187,11 +188,11 @@ pre code {
 }
 
 /* footer */
-
 footer {
     background: var(--color2);
     padding: 1em 1em 2em;
     display: flex;
+    flex-direction: column;
     width: 100%;
 }
 
@@ -201,11 +202,12 @@ footer h4 {
 }
 
 footer .container {
-    border-right: 1px solid var(--color5);
+    border-bottom: 1px solid var(--color5);
     font-size: .8em;
-    width: 50%;
-    padding-right: 1em;
+    width: 100%;
+    padding: 1em;
     letter-spacing: .07em;
+    margin-bottom: 1em;
 }
 
 footer .container a {
@@ -226,7 +228,7 @@ footer .container2 {
 }
 
 footer .container2 li {
-    display: block;
+    display: inline-block;
     list-style: none;
     margin: .5em .5em 1em;
 }
@@ -255,6 +257,18 @@ footer .container2 li span {
 
     .main_content {
         width: 70%;
+    }
+
+    /* footer */
+    footer {
+        display: flex;
+        flex-direction: row;
+        padding-bottom: 0;
+    }
+    
+    footer .container {
+        border-right: 1px solid var(--color5);
+        border-bottom: none;
     }
 }
 
