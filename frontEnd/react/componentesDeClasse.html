@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Componentes em React</title>
+    <title>Componentes de classe</title>
     <link rel="stylesheet" href="../style/stylePages.css">
 </head>
 <body>
@@ -45,7 +45,6 @@
             <li> <a href="State.html">State</a></li>
             <li> <a href="MobX/MobX.html">MobX</a></li>
             <li> <a href="redux/redux.html">Redux</a></li>
-            <li> <a href="componentesDeClasse.html">Componentes de classe</a></li>
         </ul>
     </nav>
 </header>
@@ -68,37 +67,61 @@
     </ul>
 </aside>
 <main class="main_content">
-    <h1 class="title">Componentes em React</h1>
+    <h1 class="title">Componentes de classe</h1>
 
-    <p>Em React, um componente é a unidade fundamental de uma aplicação. Um componente pode ser considerado como um bloco de construção reutilizável que pode ser combinado com outros componentes para criar uma aplicação complexa.</p>
+    <p>Em React, os componentes são blocos de construção reutilizáveis que ajudam a criar interfaces de usuário. Existem dois tipos principais de componentes em React: componentes de função e componentes de classe.</p>
 
-    <p>Existem dois tipos de componentes em React: <a href="componentesDeClasse.html">componentes de classe</a> e componentes funcionais. Componentes de classe são definidos usando a sintaxe ES6 e herdam da classe React.Component. Já os componentes funcionais são funções JavaScript simples que recebem propriedades como argumentos e retornam elementos React.</p>
-    
-    <p>Independentemente do tipo de componente, eles compartilham uma mesma estrutura básica, que consiste em um método render() que retorna uma hierarquia de elementos React. Esses elementos podem ser outros componentes ou elementos HTML regulares, e podem incluir propriedades e estados para tornar o componente dinâmico e interativo.</p>
-    
-    <p>Por exemplo, um componente simples de classe que exibe um texto pode ser definido da seguinte forma:</p>
+    <p>Os componentes de classe são definidos como classes do JavaScript que estendem a classe React.Component do React. Eles têm um estado interno e podem conter métodos de ciclo de vida do React. Aqui está um exemplo de um componente de classe em React:</p>
     
 <pre><code>
     import React from 'react';
-
+    
     class MeuComponente extends React.Component {
+      constructor(props) {
+        super(props);
+        this.state = {
+          contador: 0
+        };
+      }
+    
+      componentDidMount() {
+        console.log('O componente foi montado.');
+      }
+    
+      componentDidUpdate() {
+        console.log('O componente foi atualizado.');
+      }
+    
+      componentWillUnmount() {
+        console.log('O componente será desmontado.');
+      }
+    
+      incrementarContador() {
+        this.setState(prevState => ({
+          contador: prevState.contador + 1
+        }));
+      }
+    
       render() {
-        return &lt;p&gt;Olá, mundo!&lt;/p&gt;;
+        return (
+          &lt;div&gt;
+            &lt;h1&gt;Contador: {this.state.contador}&lt;/h1&gt;
+            &lt;button onClick={() =&gt; this.incrementarContador()}&gt;Incrementar&lt;/button&gt;
+          &lt;/div&gt;
+        );
       }
     }
-</code></pre>
-
-            <p>Já um componente funcional equivalente seria:</p>
-
-<pre><code>
-    jsx
-    Copy code
-    import React from 'react';
     
-    function MeuComponente() {
-      return &lt;p&gt;Olá, mundo!&lt;/p&gt;;
-    }
-</code></pre>    
+    export default MeuComponente;
+</code></pre>
+    
+    <p>Neste exemplo, temos um componente chamado MeuComponente que possui um estado interno representado pelo contador. Ele também possui três métodos de ciclo de vida do React: componentDidMount, componentDidUpdate e componentWillUnmount. Esses métodos são chamados em diferentes momentos do ciclo de vida do componente.</p>
+    
+    <p>Além disso, o componente possui o método incrementarContador, que atualiza o estado do contador quando o botão "Incrementar" é clicado. O valor do contador é exibido no elemento &lt;h1&gt; dentro do método render.</p>
+    
+    <p>Os componentes de classe podem ser renderizados da mesma forma que os componentes de função em React. Por exemplo, em um componente pai, você pode usar &lt;MeuComponente /&gt; para renderizar o componente MeuComponente.</p>
+    
+    <p>Lembre-se de que os componentes de classe estão sendo gradualmente substituídos pelos componentes de função no React. Os componentes de função são mais simples e têm um desempenho melhor. No entanto, ainda é útil entender os componentes de classe, pois você pode encontrar código legado ou bibliotecas que os usam.</p>
 </main>
 </div>
 <footer>
